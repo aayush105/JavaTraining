@@ -1,0 +1,13 @@
+package controlstatements.selection;
+
+public class SwitchTest {
+
+	/* ------------- Switch ----------------------
+	 * syntax :
+	 * 
+	 * switch(variable){
+	 * 	case 1 :
+	 * 	//statement
+	 * 
+	 */
+}

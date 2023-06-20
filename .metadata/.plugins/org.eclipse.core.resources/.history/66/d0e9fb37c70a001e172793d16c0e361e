@@ -1,0 +1,8 @@
+
+public class table {
+	public static void main(String[] args) {
+		System.out.println("-----------------------------------");
+		System.out.println("| SN | Name | Age | Phone | City |");
+		System.out.println("| 1. | Ram| 18 | 98986785211 | KTM |");
+	}
+}

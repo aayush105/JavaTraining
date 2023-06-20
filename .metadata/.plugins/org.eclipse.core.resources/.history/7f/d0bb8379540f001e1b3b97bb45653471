@@ -1,0 +1,37 @@
+package methods;
+
+public class MethodTest {
+	public static void main(String[] args) {
+//		sum();
+//		printTable(9);
+		int s = getSumOf1to100() ;
+		System.out.println("Total sum : "+ s );
+	}
+	
+	// 1) no return type with no argument
+	
+	static void sum() {
+		int a = 6;
+		int b = 9;
+		int c = a + b;
+		System.out.println("Result : "+ c);
+	}
+	
+	// 2) no return type with argument
+	
+	static void printTable(int n) {
+		for (int i =1; i<=10 ; i++) {
+			System.out.println(n+" x "+i+" = "+ (n*i));
+		}
+	}
+	
+	// 3) return type with no argument
+	
+	static void getSumOf1to100() {
+		int s = 0;
+		for (int i = 1; i<=100; i++) {
+			s = s + i;
+		}
+		return s;
+	}
+}

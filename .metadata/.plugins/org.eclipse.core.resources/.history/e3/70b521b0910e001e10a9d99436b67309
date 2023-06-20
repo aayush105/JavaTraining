@@ -1,0 +1,10 @@
+package controlstatements.looping;
+
+public class JumpingTest {
+	/*
+	 * a) break; : exit from loop
+	 * b) continue; : skip values
+	 * c) return; : exit from method
+	 * 
+	 */
+}

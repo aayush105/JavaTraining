@@ -1,0 +1,10 @@
+package methods;
+
+public class MethodDocs {
+/*
+ * ------------------- Method/Function ------------------------
+ * # use for code re-usability.
+ * # lines or block of code which is use to perform some specific task in the program is known as method.
+ * 
+ */
+}

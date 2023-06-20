@@ -1,0 +1,16 @@
+package controlstatements.selection;
+
+public class IfElseTest {
+	/*
+	 * ------------------------- If else --------------------
+	 * syntax :
+	 * if(condition){
+	 *	//statement
+	 *} else {
+	 *	//statement
+	 *}
+	 *
+	 *
+	 * 
+	 */
+}

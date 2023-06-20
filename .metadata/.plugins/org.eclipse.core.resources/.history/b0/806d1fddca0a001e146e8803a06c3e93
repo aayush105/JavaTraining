@@ -1,0 +1,26 @@
+
+public class table {
+    public static void main(String[] args) {
+        System.out.println("-----------------------------------");
+        System.out.println("| SN  | Name | Age | Phone       | City |");
+        System.out.println("-----------------------------------");
+
+        // Define the table data
+        String[][] tableData = {
+            {"1.", "Ram", "18", "98986785211", "KTM"},
+            {"2.", "Sita", "20", "9898678521", "BKT"},
+            {"3.", "Gita", "20", "9898678521", "BKT"},
+            {"4.", "Hari", "20", "9898678521", "BKT"},
+            {"5.", "John", "20", "9898678521", "BKT"}
+        };
+
+        // Print table rows using a for loop
+        for (String[] row : tableData) {
+            for (String cell : row) {
+                System.out.print("| " + cell + " ");
+            }
+            System.out.println("|");
+            System.out.println("-----------------------------------");
+        }
+    }
+}

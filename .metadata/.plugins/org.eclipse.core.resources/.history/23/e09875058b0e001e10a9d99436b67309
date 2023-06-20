@@ -1,0 +1,15 @@
+package controlstatements.looping;
+
+public class ForTest {
+	/* ------------------- For Loop ----------------------------
+	 *  for (initialization; condition; inc/dec){
+	 *  // statement
+	 *  
+	 *  }
+	 * 
+	 */
+public static void main(String[] args) {
+	
+	
+}
+}

@@ -1,0 +1,29 @@
+package methods;
+
+public class classwork {
+	/*
+	 *  Q) find area and volumes as:
+	 *  	a) getArea:
+	 *  	-> pass l and b as a parameter
+	 *  	-> calculate area
+	 *  	-> return area
+	 *  	-> call this method in main
+	 *  
+	 *  	b) volume:
+	 *  	-> pass area and height as parameter
+	 *  	-> calculate volume
+	 *  	-> print area
+	 *  	-> print volume
+	 *  	-> call this method in main
+	 * 
+	 */
+
+	public static void main(String[] args) {
+		
+	}
+	
+	static int getArea(int l, int b) {
+		int aera = l*b;
+	}
+	return area;
+}

@@ -1,0 +1,18 @@
+package controlstatements.looping;
+
+public class WhileTest {
+	/* -------------------------- while ----------------------
+	 * syntax :
+	 * 
+	 * while(condition){
+	 *  // statement
+	 *  }
+	 */
+	
+	public static void main(String[] args) {
+		int i = 5 ;
+		while(i>0) {
+			
+		}
+	}
+}

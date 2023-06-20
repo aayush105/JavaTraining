@@ -1,0 +1,24 @@
+package array;
+
+import java.util.Scanner;
+
+public class classwork {
+	
+	/*
+	 * Q) WAP to calculate total and average of 10 books.
+	 *
+	 */
+	public static void main(String[] args) {
+		int total;
+		int price[] = new int[10];
+		
+		for (int i = 0; i<price.length; i++) {
+			
+			System.out.println("Enter the price of book:");
+			Scanner sc = new Scanner(System.in);
+			price[i] = sc.nextInt();
+		}
+		
+		
+	}
+}
