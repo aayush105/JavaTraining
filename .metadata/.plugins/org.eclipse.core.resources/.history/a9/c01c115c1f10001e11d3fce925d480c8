@@ -1,0 +1,31 @@
+package array;
+
+public class ArrayWithMethod {
+
+	/*-------------- Array with method ------------------
+	 * 
+	 * a) Array as argument
+	 * 
+	 * 	void sum(int a[]){
+	 * 
+	 * }
+	 * sum(array);
+	 * 
+	 * b) Array as return type
+	 * 
+	 * int[] get10IntValue(){
+	 *  // array = 32,434,32,432,432,4,32;
+	 * return array;
+	 * }
+	 * 
+	 * 
+	 */
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	// ---------------- Array as Argument
+}

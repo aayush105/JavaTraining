@@ -1,0 +1,60 @@
+package array;
+
+import java.util.Scanner;
+
+public class classwork {
+	
+	/*
+	 * Q) WAP to calculate total and average of 10 books.
+	 *
+	 */
+	public static void main(String[] args) {
+//		int total = 0;
+//		int price[] = new int[10];
+//		Scanner sc = new Scanner(System.in);
+//		for (int i = 0; i<price.length; i++) {
+//			
+//			System.out.println("Enter the price of book:");
+//			
+//			price[i] = sc.nextInt();
+//			total += price[i];
+//		}
+//		int average = total/price.length;
+//		System.out.println("Total price : "+ total);
+//		System.out.println("Average price : "+ average);
+		
+		
+		String sub[] = new String[3];
+		int marks[] = new int[3];
+		Scanner sc1 = new Scanner(System.in);
+		for (int i= 0 ; i<sub.length; i++) {
+			System.out.println("Enter the subject:");
+			sub[i] = sc1.next();
+			System.out.println("Enter the marks:");
+			marks[i] = sc1.nextInt();
+		}
+		System.out.println("------------------------------------------------");
+		System.out.printf("Subject", "-----------","Marks");
+		System.out.println("------------------------------------------------");
+		
+//		System.out.printf("| %-4s | %-8s | %-4s | %-10s | %-6s |%n", "SN", "Name","Age","Phone","City");
+//		System.out.printf("------------------------------------------------%n");
+//		
+//		System.out.printf("| %-4s | %-8s | %-4d | %010d | %-6s |%n", "1.", "Ram",19,98561398,"KTM");
+//		System.out.println("------------------------------------------------");
+//		
+//		System.out.printf("| %-4s | %-8s | %-4d | %010d | %-6s |%n", "2.", "Sita",18,903324233,"BKT");
+//		System.out.println("------------------------------------------------");
+//		
+//		System.out.printf("| %-4s | %-8s | %-4d | %010d | %-6s |%n", "3.", "Hari",20,897212397,"PKR");
+//		System.out.println("------------------------------------------------");
+//		
+//		System.out.printf("| %-4s | %-8s | %-4d | %010d | %-6s |%n", "4.", "Gita",32,789127389,"KTM");
+//		System.out.println("------------------------------------------------");
+//		
+//		System.out.printf("| %-4s | %-8s | %-4d | %010d | %-6s |%n", "5.", "Shyam",16,123827321,"BKT");
+//		System.out.println("------------------------------------------------");
+	}
+	
+	
+}

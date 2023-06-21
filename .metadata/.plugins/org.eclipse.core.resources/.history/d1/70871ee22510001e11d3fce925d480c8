@@ -1,0 +1,9 @@
+package array;
+
+public class Calculation {
+
+	public static void main(String[] args) {
+		int mat1[][] = {{16,23,23},{2,3,4},{34,32,23}};
+		int mat2[][] = {{16,23,23},{2,3,4},{34,32,23}};
+	}
+}
