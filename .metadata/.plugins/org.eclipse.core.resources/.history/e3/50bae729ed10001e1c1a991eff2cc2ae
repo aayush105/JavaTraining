@@ -1,0 +1,17 @@
+package oops;
+
+public class Book {
+
+	// properties
+	int id;
+	String name;
+	String author;
+	int price;
+	
+	
+	
+	// methods
+	void printBookInfo() {
+		System.out.println("Id : "+id);
+	}
+}

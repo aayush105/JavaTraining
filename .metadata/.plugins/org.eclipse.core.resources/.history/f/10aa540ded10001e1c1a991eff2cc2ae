@@ -1,0 +1,14 @@
+package oops;
+
+public class Book {
+
+	// properties
+	int id;
+	String name;
+	String author;
+	int price;
+	
+	
+	
+	// methods
+}

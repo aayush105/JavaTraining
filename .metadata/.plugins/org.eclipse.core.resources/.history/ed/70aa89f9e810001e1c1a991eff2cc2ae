@@ -1,0 +1,20 @@
+package oops;
+
+public class OOPDocs {
+
+	/*-------------------  OOP(Object Oriented Programming) ---------------------
+	 * 
+	 * 1) class and object
+	 * 2) Encapsulation
+	 * 3) Inheritance
+	 * 4) Polymorphism
+	 * 5) Abstraction
+	 * 		a) Abstract class
+	 * 		b) Interface
+	 * 
+	 * --------------- class ---------------------
+	 * 	# use to represent real world things/entity.
+	 * 	# class contains properties and methods.
+	 * 
+	 */
+}
