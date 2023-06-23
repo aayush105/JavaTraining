@@ -1,0 +1,11 @@
+package ClassObjectPractice;
+
+public class Student {
+
+	String name;
+	int roll_no;
+	
+	void StudentInfo() {
+		System.out.println("Name : "+ name);
+	}
+}

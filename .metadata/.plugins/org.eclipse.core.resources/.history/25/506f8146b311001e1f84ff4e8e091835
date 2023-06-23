@@ -1,0 +1,16 @@
+package ClassObjectPractice;
+
+public class Area {
+
+	/* --- Level 1 ------------
+	 * 1 
+	 */
+	int l;
+	int b;
+	void setDim(int l, int b) {
+		
+	}
+	void getArea() {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package ClassObjectPractice;
+
+public class Test2 {
+
+	Student b = new Student();
+	
+	b.name = "John";
+	b.roll_no = 2;
+	
+}

@@ -1,0 +1,16 @@
+package ClassObjectPractice;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner sc = new  Scanner(System.in);
+		System.out.println("enter the length");
+		
+		Area a = new Area();
+		a.l = sc.nextInt();
+		a.b = sc.nextInt();
+		
+	}
+}

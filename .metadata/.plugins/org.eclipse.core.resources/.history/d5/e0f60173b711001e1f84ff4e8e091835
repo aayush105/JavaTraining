@@ -1,0 +1,9 @@
+package ClassObjectPractice;
+
+public class Traingle {
+ // sides
+	int a;
+	int b;
+	int c;
+	
+}
