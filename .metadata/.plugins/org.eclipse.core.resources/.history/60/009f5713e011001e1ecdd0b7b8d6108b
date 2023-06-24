@@ -1,0 +1,19 @@
+package ClassObjectPractice;
+
+public class Traingle {
+ // sides
+	int a;
+	int b;
+	int c;
+	
+	void getPerimeter() {
+		int perimeter = a+b+c;
+		int semiPerimeter = perimeter/2;
+		System.out.println("Perimeter :"+perimeter);
+	}
+	
+	void getArea() {
+		
+		int area = 
+	}
+}
