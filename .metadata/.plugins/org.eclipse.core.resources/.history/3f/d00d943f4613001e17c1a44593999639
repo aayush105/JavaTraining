@@ -1,0 +1,40 @@
+package constructor;
+
+public class User {
+	// instance variable
+	String userName;
+	String password;
+	
+	// ------------ Default Constructor --------------
+//	User(){
+//		userName = "test";
+//		password = "123";
+//	}
+//	
+	// ----------- parameterized constructor -----------
+	
+//	User(String un, String psw){
+//		userName = un;
+//		password = psw;
+//	}
+	
+	User(String userName, String password){
+		this.userName = userName; 
+		this.password = password;
+		
+	// "this" keyword represent current object
+	// we can call instance variable, instance method and constructors.
+		
+	}
+	
+	void printUser() {
+		System.out.println("Username : "+userName);
+		System.out.println("Password : " +password);
+	}
+	
+	public static void main(String[] args) {
+//		User u = new User(); // default
+		User u = new User("Aayush","777"); // parameterized
+		u.printUser();
+	}
+}
