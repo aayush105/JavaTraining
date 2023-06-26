@@ -1,0 +1,20 @@
+package constructor;
+
+public class Employee {
+
+	String name;
+	int EOJ;
+	long salary;
+	String address;
+	
+	Employee(){
+	}
+
+	Employee(String name, int EOJ, long salary, String address){
+		this.name = name;
+		this.EOJ = EOJ;
+		this.salary = salary;
+		this.address = address;
+		
+	}
+}

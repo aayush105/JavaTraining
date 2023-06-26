@@ -1,0 +1,12 @@
+package constructor;
+
+public class Area {
+
+	int length;
+	int breadth;
+	Area(int length.], int breadth){
+		this.length=lenghth
+		this.breadth= breadth;
+		
+	}
+}

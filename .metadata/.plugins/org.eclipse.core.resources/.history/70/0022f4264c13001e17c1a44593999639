@@ -1,0 +1,7 @@
+package constructor;
+
+public class Area {
+
+	int length;
+	int breadth;
+}

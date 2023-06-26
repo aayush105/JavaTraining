@@ -1,0 +1,16 @@
+package constructor;
+
+public class AddDistance {
+
+	int feet;
+	int inches;
+	
+	
+	AddDistance(){
+	}
+	
+	AddDistance(int feet, int inches){
+		this.feet = feet;
+		this.inches = inches;
+	}
+}

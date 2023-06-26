@@ -1,0 +1,17 @@
+package constructor;
+
+public class Area {
+
+	int length;
+	int breadth;
+	
+	Area(int length, int breadth){
+		this.length = length;
+		this.breadth = breadth;
+		
+	}
+	void returnArea() {
+		int area = length * breadth;
+		System.out.println("Area of Rectangle : "+ area);
+	}
+}
