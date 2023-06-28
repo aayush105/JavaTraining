@@ -1,0 +1,14 @@
+package objectwitharray;
+
+public class ObjectWithArray {
+
+	/*
+	 * ------- Array of object --------------
+	 * 
+	 * syntax:
+	 * 
+	 * 		class_name[] array_name = new class_name[];
+	 * 
+	 * 
+	 */
+}

@@ -1,0 +1,17 @@
+package objectwitharray;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		Book[] books = new Book[5];
+
+		// Create and set data for each book
+		for(int i = 0;i<books.length;i++) {
+			Book b= new Book();
+			b.setId(1);
+			b.setName("Book 1");
+			b.setAuthbor("Author 1");
+			b.setPrice(100);
+			books[i]=b;
+		}
+}

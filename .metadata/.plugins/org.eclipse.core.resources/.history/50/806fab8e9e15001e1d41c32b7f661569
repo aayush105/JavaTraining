@@ -1,0 +1,21 @@
+package objectwithmethod;
+
+public class ObjectWithMethodDocs {
+
+	/*
+	 * ----------------- object with method ----------------
+	 * 1> object as paramter
+	 * 	
+	 * 	Employee -> id, fn , ln,city,age,salary,.........40th
+	 * 
+	 * void print(Employee emp){
+	 * 
+	 * 
+	 * }
+	 * 
+	 * print();
+	 * 
+	 */
+	
+	
+}

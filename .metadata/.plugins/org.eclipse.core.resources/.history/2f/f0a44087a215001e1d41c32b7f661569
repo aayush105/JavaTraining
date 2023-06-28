@@ -1,0 +1,9 @@
+package objectwitharray;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Book b = new Book();
+	}
+}
