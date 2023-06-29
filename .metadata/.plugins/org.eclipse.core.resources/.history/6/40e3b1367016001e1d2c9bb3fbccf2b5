@@ -1,0 +1,14 @@
+package aggregation;
+
+public class Test {
+public static void main(String[] args) {
+	Car c = new Car();
+	c.setColor("Black");
+	c.setCompany("Tesla");
+	c.setPrice(590899);
+	c.setModel("Abc");
+	
+	
+	Teacher t = new Teacher();
+}
+}

@@ -1,0 +1,10 @@
+package aggregation;
+
+public class Teacher {
+	
+	private int id ;
+	private String name;
+	private String subject;
+	private int salary;
+}
+

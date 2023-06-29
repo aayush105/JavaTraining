@@ -1,0 +1,10 @@
+package objectwitharray;
+
+public class PersonTest {
+
+	
+	public static void main(String[] args) {
+		
+		Person[] per = new Person[2];
+	}
+}

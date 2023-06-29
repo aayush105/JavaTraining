@@ -2,3 +2,8 @@
 1687861618942	Delete element
 1687950991176	Extract method 'getBookData'
 1687951012068	Extract method 'printData'
+1687952556702	Extract method 'getEmployeeData'
+1687952583558	Extract method 'print'
+1688047994325	Delete element
+1688048670261	Extract method 'print'
+1688048693698	Extract method 'getPersonData'

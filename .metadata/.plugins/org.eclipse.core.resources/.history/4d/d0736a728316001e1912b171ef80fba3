@@ -1,0 +1,19 @@
+package objectwitharray;
+
+import java.util.Scanner;
+
+public class PersonTest {
+	 
+	Person[] p = new Person[2];
+	Scanner sc = new Scanner(System.in);
+	
+	Person p = new Person();
+	
+	
+	void printData(Person p) {
+		System.out.println("First name : "+p.getF_name());
+		System.out.println("Last name : "+p.getL_name());
+		System.out.println("Age: "+p.getAge());
+		
+	}
+}

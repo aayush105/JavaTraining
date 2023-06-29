@@ -1,0 +1,9 @@
+package methodoverriding;
+
+public class NepaliBank extends CentralBank {
+	
+	@Override
+	void getName() {
+		System.out.println("Nepal Bank");
+	}
+}

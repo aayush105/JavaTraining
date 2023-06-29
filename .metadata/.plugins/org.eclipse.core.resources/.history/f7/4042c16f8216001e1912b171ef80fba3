@@ -1,0 +1,16 @@
+package objectwitharray;
+
+public class PersonTest {
+
+	Person[] p = new Person[5];
+	
+	for (int i = 0; i<)
+	
+	
+	void printData(Person p) {
+		System.out.println("First name : "+p.getF_name());
+		System.out.println("Last name : "+p.getL_name());
+		System.out.println("Age: "+p.getAge());
+		
+	}
+}

@@ -1,0 +1,18 @@
+package methodoverriding;
+
+public class MethodOverridingDocs {
+
+	/*
+	 * ------------- Method Overriding --------------------
+	 * 
+	 * # use to achieve runtime polymorphism
+	 * # there must be IS_A
+	 * 
+	 * central bank-> name , intrest rate, exchange rate
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+}

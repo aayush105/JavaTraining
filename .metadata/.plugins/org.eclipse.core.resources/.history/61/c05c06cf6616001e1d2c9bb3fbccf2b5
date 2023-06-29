@@ -1,0 +1,9 @@
+package objectwitharray;
+
+public class Person {
+	
+	private String f_name;
+	private String l_name;
+	private int age;
+	
+}

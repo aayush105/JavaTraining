@@ -1,0 +1,18 @@
+package objectwitharray;
+
+import java.util.Scanner;
+
+public class PersonTest {
+
+	
+	public static void main(String[] args) {
+		
+		Person[] per = new Person[2];
+		Scanner sc = new Scanner(System.in);
+		
+		Person p = new Person p();
+		System.out.println("Enter first name :");
+		p.setF_name(sc.next());
+		System.out.println("Enter second name");
+	}
+}

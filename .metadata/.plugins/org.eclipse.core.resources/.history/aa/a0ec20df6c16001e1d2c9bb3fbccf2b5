@@ -1,0 +1,18 @@
+package methodoverriding;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		//static or early binding of object
+		
+		NICBank nb = new NICBank();
+		nb.getName();
+		nb.getInterestRate();
+		
+		//up-casting
+		CentralBank b = new PrabhuBank();
+		
+		
+	}
+}
