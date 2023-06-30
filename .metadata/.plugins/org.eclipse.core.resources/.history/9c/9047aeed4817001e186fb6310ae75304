@@ -1,0 +1,14 @@
+package Practice_3;
+
+public class Employee {
+
+	private int empid;
+	private String name;
+	private String ssn;
+	private double salary;
+	
+	Employee(int empid, String name, String ssn, double salary ){
+		
+	}
+	
+}

@@ -1,8 +1,0 @@
-package ClassObjectPractice;
-
-public class Traingle {
-
-	int base;
-	int height;
-	
-}

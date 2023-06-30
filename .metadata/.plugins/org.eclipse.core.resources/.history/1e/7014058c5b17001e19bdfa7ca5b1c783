@@ -1,0 +1,13 @@
+package Inheritance_practice;
+
+public class Employee extends Member {
+	
+	String specialization;
+	String dept;
+	
+	void print() {
+		System.out.println("----- Employee's Data ------");
+		System.out.println("Specialization: "+specialization);
+		System.out.println("Department: "+dept);
+	}
+}

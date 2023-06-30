@@ -1,0 +1,6 @@
+package Practice_3;
+
+public class EmployeeTest {
+
+	Engineer e = new Engineer();
+}

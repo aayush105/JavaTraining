@@ -1,0 +1,21 @@
+package Inheritance_practice;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		e.name = "Ram";
+		e.age = 21;
+		e.address = "Ktm";
+		e.number = 9887613211l;
+		e.salary = 200000;
+		
+		Manager m = new Manager();	
+		
+		e.name = "Ram";
+		e.age = 21;
+		e.address = "Ktm";
+		e.number = 9887613211l;
+		e.salary = 200000;
+		}
+}

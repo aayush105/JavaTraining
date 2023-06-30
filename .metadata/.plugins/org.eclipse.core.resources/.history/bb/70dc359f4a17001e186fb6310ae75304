@@ -1,0 +1,5 @@
+package Practice_3;
+
+public class Director extends Manager{
+
+}

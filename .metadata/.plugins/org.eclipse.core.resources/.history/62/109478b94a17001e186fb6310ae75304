@@ -1,0 +1,10 @@
+package Practice_3;
+
+public class Director extends Manager{
+	private double budget;
+	Director(int empid, String name, String ssn, double salary, String deptName) {
+		super(empid, name, ssn, salary, deptName);
+	this.budget = budget;	
+	}
+
+}

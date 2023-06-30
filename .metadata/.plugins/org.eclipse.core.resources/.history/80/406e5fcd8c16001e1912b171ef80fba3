@@ -1,0 +1,23 @@
+package objectwitharray;
+
+import java.util.Scanner;
+
+public class PersonTest {
+
+	public static void main(String[] args) {
+		Person[] per = new Person[2];
+		Scanner sc = new Scanner(System.in);
+		
+		Person p = new Person();
+		
+		System.out.println("Enter fist name:");
+		p.setF_name(sc.next());
+		System.out.println("Enter Last name:");
+		p.setL_name(sc.next());
+		System.out.println("Enter age:");
+		p.setAge(sc.nextInt());
+//		per = p;
+	}
+	
+	
+}

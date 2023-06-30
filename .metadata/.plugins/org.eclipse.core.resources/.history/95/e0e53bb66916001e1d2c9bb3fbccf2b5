@@ -1,9 +1,0 @@
-package objectwitharray;
-
-public class PersonTest {
-
-	void printData(Person p) {
-		System.out.println();
-		
-	}
-}

@@ -1,0 +1,6 @@
+package Inheritance_practice;
+
+public class Manager {
+	String specialization;
+	String dept;
+}

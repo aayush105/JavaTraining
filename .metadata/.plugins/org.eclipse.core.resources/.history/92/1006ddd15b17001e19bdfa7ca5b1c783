@@ -1,0 +1,14 @@
+package Inheritance_practice;
+
+public class Manager extends Member {
+	
+	String specialization;
+	String dept;
+	
+	void print() {
+		
+		System.out.println("Specialization: "+specialization);
+		System.out.println("Department: "+dept);
+		
+	}
+}

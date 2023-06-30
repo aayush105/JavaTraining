@@ -1,0 +1,10 @@
+package Practice_3;
+
+public class Director extends Manager{
+
+	Director(int empid, String name, String ssn, double salary, String deptName) {
+		super(empid, name, ssn, salary, deptName);
+		// TODO Auto-generated constructor stub
+	}
+
+}

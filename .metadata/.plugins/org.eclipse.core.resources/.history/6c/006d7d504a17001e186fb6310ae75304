@@ -1,0 +1,17 @@
+package Practice_3;
+
+public class Manager extends Employee{
+	private String deptName;
+
+	Manager(int empid, String name, String ssn, double salary, String deptName) {
+		super(empid, name, ssn, salary);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+//Manager(int empid, String name, String ssn, double salary, String deptName) {
+//	
+//	}
+
+}
