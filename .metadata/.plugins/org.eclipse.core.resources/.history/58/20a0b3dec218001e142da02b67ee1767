@@ -1,0 +1,17 @@
+package abstraction;
+
+public class AbstractionDocs {
+	
+	/*
+	 * ---------------- Abstraction ------------
+	 * # process of hiding implementation details in the program.
+	 * # to achieve abstraction :
+	 * 	a> Abstract class:
+	 * 		# class which contains abstract(unimplemented method) and non abstractimplemented methods) methods is known as abstract class.
+	 * 
+	 * 	b> Interface:
+	 * 
+	 * 
+	 */
+
+}

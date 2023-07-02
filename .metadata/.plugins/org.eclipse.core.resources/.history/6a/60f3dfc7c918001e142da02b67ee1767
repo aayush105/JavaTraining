@@ -1,0 +1,25 @@
+package abstraction;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class UserServiceImpl implements UserService, GeneralService, Serializable, List<String>{
+
+	@Override
+	public void addUser() {
+	System.out.println("Added success");
+		
+	}
+
+	@Override
+	public void deleteUser() {
+		System.out.println("Deleted success");
+	}
+
+	@Override
+	public void print() {
+		System.out.println("multiple implement");
+		
+	}
+
+}
