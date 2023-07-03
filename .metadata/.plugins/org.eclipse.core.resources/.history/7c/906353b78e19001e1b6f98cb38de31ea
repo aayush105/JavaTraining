@@ -1,0 +1,26 @@
+package JavaCollection;
+
+public class CollectionDocs {
+
+	
+	/*
+	 * ------------  collection framework / Java collection ------------------
+	 * 
+	 * # use to store and processng dynamic multiple data.
+	 * 
+	 * 1> List: dynamic array
+	 * 	a> ArrayList : slow processing, better to use for data storage
+	 * 	b> LinkedList : fast processing, better to use for data processing
+	 * 
+	 * 2> Set : Collection of unique data
+	 * 	a> HashSet : unique data only
+	 * 	b> TreeSet : Unique + sorted data
+	 * 	c> LinkedHashSet : unique + insertion in order
+	 * 
+	 * 3> Map : data managed in key, value<K,V> pair
+	 * 	a> HashMap : <K,V> pair
+	 * 	b> TreeMap :<K,V> pair + sorted
+	 * 	c> LinkedHashMap : <K,V> pair + inerstion in order
+	 * 
+	 */
+}

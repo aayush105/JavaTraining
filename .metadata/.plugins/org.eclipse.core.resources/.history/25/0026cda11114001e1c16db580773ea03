@@ -1,8 +1,0 @@
-package Static;
-
-public class StaticBlock {
-
-	static {
-		System.out.println("static block is invoked!!");
-	}
-}

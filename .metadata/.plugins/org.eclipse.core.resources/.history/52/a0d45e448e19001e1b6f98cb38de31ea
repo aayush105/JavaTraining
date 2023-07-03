@@ -1,0 +1,16 @@
+package JavaCollection;
+
+public class CollectionDocs {
+
+	
+	/*
+	 * ------------  collection framework / Java collection ------------------
+	 * 
+	 * # use to store and processng dynamic multiple data.
+	 * 
+	 * 1> List: dynamic array
+	 * 	a> ArrayList : slow processing, better to use for data storage
+	 * 
+	 * 
+	 */
+}
