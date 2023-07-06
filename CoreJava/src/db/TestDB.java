@@ -34,11 +34,11 @@ public class TestDB {
 		
 		// -------------- delete sql ----------------
 		
-		String sql = "delete from user where id = 2";
-		Statement stm = con.createStatement();
-		stm.execute(sql);
-		
-		System.out.println("Success");
+//		String sql = "delete from user where id = 2";
+//		Statement stm = con.createStatement();
+//		stm.execute(sql);
+//		
+//		System.out.println("Success");
 		
 		//-------------- update sql ---------------
 //		String sql = "update user set password = 'test444' where id = 3 ";

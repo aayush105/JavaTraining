@@ -10,7 +10,7 @@ import com.service.ProductServiceImpl;
 public class Test {
 
 	public static void main(String[] args) {
-		add();
+//		add();
 		getAll();
 //		delete();
 	}
@@ -53,16 +53,22 @@ public class Test {
 	
 	static void getAll() {
 		ProductService ps = new ProductServiceImpl();
-		List<Product> plist = ps.getAllProducts();
-		System.out.println(plist);
+//		List<Product> plist = ps.getAllProducts();
+//		System.out.println(plist);
+//		ps.getProduct();
+		ps.getProduct();
 	}
 	
 	//delete product
 	static void delete() {
 		Scanner sc = new Scanner(System.in);
 		ProductService ps = new ProductServiceImpl();
+		System.out.println("enter the id to delete the data:");
+//		Product p = new Product();
+		int id = sc.nextInt();
+		ps.deleteProduct(id);
 		
-		ps.deleteProduct(0);
+		
 	}
 	/*
 	 * 1> XAMPP + sqlYog community
