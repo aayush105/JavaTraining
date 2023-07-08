@@ -1,8 +1,0 @@
-package Inheritance_practice;
-
-public class Child {
-
-	void print() {
-		System.out.println("this is child class.");
-	}
-}
