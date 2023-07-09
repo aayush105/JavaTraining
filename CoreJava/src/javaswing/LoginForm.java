@@ -5,23 +5,27 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JScrollPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginForm extends JFrame {
 
 	private JPanel contentPane;
-	/**
-	 * @wbp.nonvisual location=145,-13
-	 */
-	private final JScrollPane scrollPane = new JScrollPane();
-	private JTextField textField;
-	private JPasswordField passwordField_1;
+	private JLabel lblNewLabel;
+	private JTextField usernameTxt;
+	private JLabel lblNewLabel_1;
+	private JPasswordField passwordTxt;
+	private JButton btnNewButton;
+	private JLabel lblNewLabel_2;
+	private JButton btnNewButton_1;
+	private JButton btnBack;
 
 	/**
 	 * Launch the application.
@@ -45,41 +49,143 @@ public class LoginForm extends JFrame {
 	public LoginForm() {
 		setTitle("LoginForm");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 710, 457);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblUsername = new JLabel("Username");
-		lblUsername.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblUsername.setBounds(43, 86, 105, 15);
-		contentPane.add(lblUsername);
-		
-		textField = new JTextField();
-		textField.setBounds(166, 79, 136, 31);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
-		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblPassword.setBounds(43, 130, 105, 15);
-		contentPane.add(lblPassword);
-		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(166, 123, 136, 31);
-		contentPane.add(passwordField_1);
-		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.setBackground(new Color(53, 132, 228));
-		btnNewButton.setBounds(185, 185, 83, 25);
-		contentPane.add(btnNewButton);
-		
-		JLabel lblUserLogin = new JLabel("User Login");
-		lblUserLogin.setForeground(new Color(38, 162, 105));
-		lblUserLogin.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblUserLogin.setBounds(113, 12, 144, 48);
-		contentPane.add(lblUserLogin);
+		contentPane.add(getLblNewLabel());
+		contentPane.add(getUsernameTxt());
+		contentPane.add(getLblNewLabel_1());
+		contentPane.add(getPasswordTxt());
+		contentPane.add(getBtnNewButton());
+		contentPane.add(getLblNewLabel_2());
+		contentPane.add(getBtnNewButton_1());
+		contentPane.add(getBtnBack());
+	}
+	private JLabel getLblNewLabel() {
+		if (lblNewLabel == null) {
+			lblNewLabel = new JLabel("UserName");
+			lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
+			lblNewLabel.setBounds(114, 102, 111, 39);
+		}
+		return lblNewLabel;
+	}
+	private JTextField getUsernameTxt() {
+		if (usernameTxt == null) {
+			usernameTxt = new JTextField();
+			usernameTxt.setBounds(235, 102, 244, 47);
+			usernameTxt.setColumns(10);
+		}
+		return usernameTxt;
+	}
+	private JLabel getLblNewLabel_1() {
+		if (lblNewLabel_1 == null) {
+			lblNewLabel_1 = new JLabel("Password");
+			lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 18));
+			lblNewLabel_1.setBounds(114, 184, 99, 37);
+		}
+		return lblNewLabel_1;
+	}
+	private JPasswordField getPasswordTxt() {
+		if (passwordTxt == null) {
+			passwordTxt = new JPasswordField();
+			passwordTxt.setBounds(235, 182, 244, 47);
+		}
+		return passwordTxt;
+	}
+	private JButton getBtnNewButton() {
+		if (btnNewButton == null) {
+			btnNewButton = new JButton("Login");
+			btnNewButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+					  //JOptionPane.showMessageDialog(null, "Hello");
+					
+					
+					// form validation
+					if(usernameTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(usernameTxt, "username required");
+						return ;
+					}
+					if(passwordTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(passwordTxt, "username required");
+						return ;
+					}
+					
+					String un = usernameTxt.getText(); // to get the value of username
+					String psw = passwordTxt.getText(); // to get the value of password
+					
+					if(un.equals("ram") && psw.equals("123")) {
+						
+						JOptionPane.showMessageDialog(null,"login success");
+						new Home1().setVisible(true); // to redirect to the home page
+						dispose();						
+					}else{
+						JOptionPane.showMessageDialog(null,"login failed");
+					}
+					
+				}
+			});
+			btnNewButton.setBackground(new Color(127, 255, 212));
+			btnNewButton.setBounds(368, 241, 111, 25);
+		}
+		return btnNewButton;
+	}
+	private JLabel getLblNewLabel_2() {
+		if (lblNewLabel_2 == null) {
+			lblNewLabel_2 = new JLabel("User Login");
+			lblNewLabel_2.setForeground(new Color(0, 255, 0));
+			lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 40));
+			lblNewLabel_2.setBounds(203, 24, 345, 47);
+		}
+		return lblNewLabel_2;
+	}
+	private JButton getBtnNewButton_1() {
+		if (btnNewButton_1 == null) {
+			btnNewButton_1 = new JButton("Reset");
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+					usernameTxt.setText("");
+					passwordTxt.setText("");
+				}
+			});
+			btnNewButton_1.setBounds(294, 278, 122, 25);
+		}
+		return btnNewButton_1;
+	}
+	
+	/*
+	 * ---------- Assignment ---------------
+	 * 
+	 * index form consist of login and signuo button
+	 * click login to go -> (login form) un, psw, login, back to go to index page after success go to home form
+	 * click sign up to go  ->(signup form) fn.ln.un,psw,signup,back) after success go to login form
+	 * 						click back to go to index
+	 * 
+	 * home form -> logout to go back to login form
+	 * 
+	 *Next one
+	 *
+	 * Calculation form -> P,T,R (fields), Calculate button, SI,Ammout(filed)
+	 *
+	 */
+	
+	private JButton getBtnBack() {
+		if (btnBack == null) {
+			btnBack = new JButton("Back");
+			btnBack.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					new IndexForm().setVisible(true);
+					dispose();
+				}
+			});
+			btnBack.setBounds(235, 241, 117, 25);
+		}
+		return btnBack;
 	}
 }
+
+

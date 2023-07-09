@@ -30,4 +30,8 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Result"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="javaswing.LoginForm"/>
+    <fullyQualifiedTypeName name="javaswing.IndexForm"/>
+    <fullyQualifiedTypeName name="javaswing.SignUpForm"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>
