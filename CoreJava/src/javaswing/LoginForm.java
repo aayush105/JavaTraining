@@ -13,6 +13,10 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.awt.event.ActionEvent;
 
 public class LoginForm extends JFrame {
@@ -117,14 +121,40 @@ public class LoginForm extends JFrame {
 					String un = usernameTxt.getText(); // to get the value of username
 					String psw = passwordTxt.getText(); // to get the value of password
 					
-					if(un.equals("ram") && psw.equals("123")) {
+					// check user in database
+					
+					try {
+						Class.forName("com.mysql.cj.jdbc.Driver");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb430","root","Aayush_105");
 						
-						JOptionPane.showMessageDialog(null,"login success");
-						new Home1().setVisible(true); // to redirect to the home page
-						dispose();						
-					}else{
-						JOptionPane.showMessageDialog(null,"login failed");
+						// login sql
+						
+						String sql = "select * from user where name ='"+un+"' and password ='"+psw+"'   ";
+						java.sql.Statement stm = con.createStatement();
+						ResultSet rs = stm.executeQuery(sql);
+						
+						if(rs.next()) {
+							JOptionPane.showMessageDialog(null, "Login Success");
+							new Home1().setVisible(true);
+							dispose();
+						} else {
+							JOptionPane.showMessageDialog(null, "Login Failed");
+						}
+					} catch (Exception e1) {
+						
+						e1.printStackTrace();
 					}
+					
+					
+					
+//					if(un.equals("ram") && psw.equals("123")) {
+//						
+//						JOptionPane.showMessageDialog(null,"login success");
+//						new Home1().setVisible(true); // to redirect to the home page
+//						dispose();						
+//					}else{
+//						JOptionPane.showMessageDialog(null,"login failed");
+//					}
 					
 				}
 			});
