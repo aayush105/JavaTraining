@@ -5,11 +5,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.mysql.cj.jdbc.Driver;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.awt.event.ActionEvent;
 
 public class SignUpForm extends JFrame {
@@ -168,6 +174,31 @@ public class SignUpForm extends JFrame {
 					String un = usernameTxt.getText();
 					String pw = passwordTxt.getText();
 					
+					
+					// connect the db
+					try {
+						Class.forName("com.mysql.cj.jdbc.Driver");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","root","Aayush_105");;
+						
+						// insert data 
+						
+						String sql = "INSERT INTO user(firstname, lastname, username, password) VALUES (?, ?, ?, ?)";
+						 PreparedStatement stmt = con.prepareStatement(sql);
+						    stmt.setString(1, fn);
+						    stmt.setString(2, ln);
+						    stmt.setString(3, un);
+						    stmt.setString(4, pw);
+						   
+						    stmt.executeUpdate();
+					    
+						System.out.println("Insert Success");
+						con.close();
+						
+						
+					} catch (Exception e1) {
+						
+						e1.printStackTrace();
+					}
 					
 					
 					new LoginForm().setVisible(true);

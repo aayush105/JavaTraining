@@ -19,6 +19,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class TableForm extends JFrame {
@@ -199,10 +204,37 @@ public class TableForm extends JFrame {
 						agree = "No";					
 						}
 					
+					try {
+						Class.forName("com.mysql.cj.jdbc.Driver");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentinfodb","root","Aayush_105");
+//						
+//						// insert into db
+						String sql = "insert into info(name,college,address,gender,agree) values('"+name+"','"+adr+"','"+colz+"','"+gender+"','"+agree+"')";
+						Statement stm = con.createStatement();
+						stm.execute(sql);
+
+						
+//						String sql = "INSERT INTO info(name, college, address, gender, agree) VALUES (?, ?, ?, ?, ?)";
+//					    PreparedStatement stmt = con.prepareStatement(sql);
+//					    stmt.setString(1, name);
+//					    stmt.setString(2, colz);
+//					    stmt.setString(3, adr);
+//					    stmt.setString(4, gender);
+//					    stmt.setString(5, agree);
+//					    stmt.executeUpdate();
+					    
+						System.out.println("Insert Success");
+						con.close();
+					} catch (Exception e1) {
+						
+						
+						e1.printStackTrace();
+					} 
 					//set data in JTable row
 					
 					DefaultTableModel tmodel = (DefaultTableModel) table.getModel();
 					tmodel.addRow(new Object[] {name,adr,colz,gender,agree});
+				
 					
 					// Clear input data
 					nameTxt.setText("");
@@ -253,6 +285,21 @@ public class TableForm extends JFrame {
 					
 					DefaultTableModel tmodel = (DefaultTableModel) table.getModel();
 					tmodel.setRowCount(0);
+					
+					try {
+						Class.forName("com.mysql.cj.jdbc.Driver");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentinfodb","root","Aayush_105");
+						
+						// clear db 
+						
+						String sql = "truncate studentinfodb.info";
+						Statement stm = con.createStatement();
+						stm.execute(sql);
+						
+					} catch (Exception e1) {
+						
+						e1.printStackTrace();
+					}
 				}
 			});
 			btnClearTableData.setBounds(460, 314, 176, 25);

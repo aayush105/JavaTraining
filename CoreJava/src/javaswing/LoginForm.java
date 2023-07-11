@@ -125,11 +125,11 @@ public class LoginForm extends JFrame {
 					
 					try {
 						Class.forName("com.mysql.cj.jdbc.Driver");
-						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb430","root","Aayush_105");
+						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","root","Aayush_105");
 						
 						// login sql
 						
-						String sql = "select * from user where name ='"+un+"' and password ='"+psw+"'   ";
+						String sql = "select * from user where username ='"+un+"' and password ='"+psw+"'   ";
 						java.sql.Statement stm = con.createStatement();
 						ResultSet rs = stm.executeQuery(sql);
 						
