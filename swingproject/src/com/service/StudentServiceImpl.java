@@ -45,7 +45,18 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public boolean deleteStudent(int id) {
-		// TODO Auto-generated method stub
+		String sql = " delete from student where id = "+ id ;
+		
+		try {
+			Statement stm = DB.getConnection().createStatement();
+			stm.execute(sql);
+			return true;
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
 		return false;
 	}
 
@@ -57,7 +68,7 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public Student getStudentById(int id) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -80,7 +91,7 @@ public class StudentServiceImpl implements StudentService{
 				s.setAge(rs.getInt("age"));
 				s.setPhone(rs.getString("phone"));
 				
-				
+				list.add(s);
 			}
 		} catch (SQLException e) {
 			
@@ -93,8 +104,33 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public List<Student> searchStudents(String data) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Student> list = new ArrayList<>();
+		String sql = " Select * from student where fname like '%"+data+"%' OR college like '%"+data+"%' OR lname like '%"+data+"%' OR age like '%"+data+"%' OR phone like '%"+data+"%' ";
+		
+		try {
+			Statement stm = DB.getConnection().createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			
+			while(rs.next()) {
+				Student s = new Student();
+				
+				s.setId(rs.getInt("id"));
+				s.setFname(rs.getString("fname"));
+				s.setLname(rs.getString("lname"));
+				s.setCollege(rs.getString("college"));
+				s.setAge(rs.getInt("age"));
+				s.setPhone(rs.getString("phone"));
+				
+				list.add(s);
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return list;
+	
 	}
 
 }

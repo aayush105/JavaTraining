@@ -31,6 +31,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.awt.event.ActionEvent;
+import javax.swing.JTabbedPane;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class signupform extends JFrame {
 
@@ -76,6 +79,7 @@ public class signupform extends JFrame {
 	private JRadioButton femaleBtn;
 	private JLabel lblNewLabel_1_1;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JTabbedPane tabbedPane;
 
 	/**
 	 * Launch the application.
@@ -145,6 +149,8 @@ public class signupform extends JFrame {
 		contentPane.add(getMaleBtn());
 		contentPane.add(getFemaleBtn());
 		contentPane.add(getLblNewLabel_1_1());
+		contentPane.add(getTabbedPane());
+		displayData();
 	}
 
 	private JLabel getLblNewLabel() {
@@ -251,6 +257,7 @@ public class signupform extends JFrame {
 					
 					if(res) {
 						JOptionPane.showMessageDialog(null, "Added Success");
+						displayData();
 					} else {
 						JOptionPane.showMessageDialog(null, "Added Failed");
 					}
@@ -280,17 +287,17 @@ public class signupform extends JFrame {
 		
 	}
 	
-//	private void displayData() {
-//		StudentService ss = new StudentServiceImpl();
-//		List<Student> slist = ss.getsAllStudents();
-//		
-//		DefaultTableModel tmodel =(DefaultTableModel) table.getModel();
-//		tmodel.setRowCount(0); // reset table
-//		
-//		for (Student st : slist) {
-//			tmodel.addRow(new Object[] {st.getId(),st.getFname(),st.getLname(),st.getCollege(),st.getAge(),st.getPhone()});
-//		}
-//	}
+	private void displayData() {
+		StudentService ss = new StudentServiceImpl();
+		List<Student> slist = ss.getsAllStudents();
+		
+		DefaultTableModel tmodel =(DefaultTableModel) table.getModel();
+		tmodel.setRowCount(0); // reset table
+		
+		for (Student st : slist) {
+			tmodel.addRow(new Object[] {st.getId(),st.getFname(),st.getLname(),st.getCollege(),st.getAge(),st.getPhone()});
+		}
+	}
 	
 	private JButton getUpdateBtn() {
 		if (updateBtn == null) {
@@ -434,6 +441,23 @@ public class signupform extends JFrame {
 	private JTextField getSearchTxt() {
 		if (searchTxt == null) {
 			searchTxt = new JTextField();
+			searchTxt.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyReleased(KeyEvent e) {
+					String sdata = searchTxt.getText().trim();
+					
+					StudentService ss = new  StudentServiceImpl();
+					List<Student> slist = ss.searchStudents(sdata);
+					
+					DefaultTableModel tmodel =(DefaultTableModel) table.getModel();
+					tmodel.setRowCount(0); // reset table
+					
+					for (Student st : slist) {
+						tmodel.addRow(new Object[] {st.getId(),st.getFname(),st.getLname(),st.getCollege(),st.getAge(),st.getPhone()});
+					}
+					
+				}
+			});
 			searchTxt.setColumns(10);
 			searchTxt.setBounds(837, 34, 146, 27);
 		}
@@ -465,6 +489,26 @@ public class signupform extends JFrame {
 	private JButton getDeleteBtn() {
 		if (deleteBtn == null) {
 			deleteBtn = new JButton("Delete");
+			deleteBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+					if(table.getSelectedRow() < 0) {
+						JOptionPane.showMessageDialog(null, "select any row");
+						return;
+					}
+					int srow = table.getSelectedRow();
+					int sid = (int) table.getModel().getValueAt(srow, 0);
+					
+					
+					StudentService ss = new StudentServiceImpl();
+					if(ss.deleteStudent(sid)) {
+						JOptionPane.showMessageDialog(null, "delete success");
+						displayData();
+					} else {
+						JOptionPane.showMessageDialog(null, "delete failed");
+					}
+				}
+			});
 			deleteBtn.setBounds(534, 376, 81, 38);
 		}
 		return deleteBtn;
@@ -479,6 +523,11 @@ public class signupform extends JFrame {
 	private JButton getViewBtn() {
 		if (viewBtn == null) {
 			viewBtn = new JButton("View");
+			viewBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+//					displayData();
+				}
+			});
 			viewBtn.setBounds(732, 376, 70, 38);
 		}
 		return viewBtn;
@@ -521,5 +570,12 @@ public class signupform extends JFrame {
 			lblNewLabel_1_1.setBounds(12, 102, 84, 31);
 		}
 		return lblNewLabel_1_1;
+	}
+	private JTabbedPane getTabbedPane() {
+		if (tabbedPane == null) {
+			tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+			tabbedPane.setBounds(797, 388, 5, 7);
+		}
+		return tabbedPane;
 	}
 }
