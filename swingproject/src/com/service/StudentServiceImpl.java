@@ -62,14 +62,70 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public boolean updateStudent(Student s) {
-		// TODO Auto-generated method stub
+		String sql = "UPDATE student set fname = ?, lname = ?, gender = ?, email = ?, phone = ?, dob = ?, college = ?, faculty = ?, rollno = ?, age = ?, country = ?, city = ?, state = ? where id = ?"; 
+		
+		try {
+			PreparedStatement pstm = DB.getConnection().prepareStatement(sql);
+			pstm.setString(1, s.getFname());
+	        pstm.setString(2, s.getLname());
+	        pstm.setString(3, s.getGender());
+	        pstm.setString(4, s.getEmail());
+	        pstm.setString(5, s.getPhone());
+	        pstm.setString(6, s.getDob());
+	        pstm.setString(7, s.getCollege());
+	        pstm.setString(8, s.getFaculty());
+	        pstm.setInt(9, s.getRollno());
+	        pstm.setInt(10, s.getAge());
+	        pstm.setString(11, s.getCountry());
+	        pstm.setString(12, s.getCity());
+	        pstm.setString(13, s.getState());
+	        pstm.setInt(14, s.getId());
+	        
+	        pstm.execute();
+	        return true ;
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
 		return false;
+		
 	}
 
 	@Override
 	public Student getStudentById(int id) {
 		
-		return null;
+		Student s = new Student();
+		
+		String sql = "select * from student where id ="+id;
+		
+		try {
+			Statement stm = DB.getConnection().createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			if(rs.next()) {
+				
+				s.setId(rs.getInt("id"));
+				s.setFname(rs.getString("fname"));
+				s.setLname(rs.getString("lname"));
+				s.setDob(rs.getString("dob"));
+				s.setCollege(rs.getString("college"));
+				s.setCity(rs.getString("city"));
+				s.setCountry(rs.getString("country"));
+				s.setRollno(rs.getInt("rollno"));
+				s.setEmail(rs.getString("email"));
+				s.setFaculty(rs.getString("faculty"));
+				s.setAge(rs.getInt("age"));
+				s.setPhone(rs.getString("phone"));
+				s.setState(rs.getString("state"));
+				s.setGender(rs.getString("gender"));
+			}
+			} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return s;
 	}
 
 	@Override
