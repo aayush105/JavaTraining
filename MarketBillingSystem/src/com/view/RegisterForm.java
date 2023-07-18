@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import com.toedter.calendar.JDateChooser;
 
 public class RegisterForm extends JFrame {
 
@@ -32,6 +33,7 @@ public class RegisterForm extends JFrame {
 	private JTextField addressTxt;
 	private JButton cancelBtn;
 	private JButton registerBtn;
+	private JDateChooser dateChooser;
 
 	/**
 	 * Launch the application.
@@ -78,6 +80,7 @@ public class RegisterForm extends JFrame {
 		contentPane.add(getAddressTxt());
 		contentPane.add(getCancelBtn());
 		contentPane.add(getRegisterBtn());
+		contentPane.add(getDateChooser());
 	}
 	private JLabel getLblClickHereTo() {
 		if (lblClickHereTo == null) {
@@ -231,5 +234,12 @@ public class RegisterForm extends JFrame {
 			registerBtn.setBounds(289, 445, 98, 33);
 		}
 		return registerBtn;
+	}
+	private JDateChooser getDateChooser() {
+		if (dateChooser == null) {
+			dateChooser = new JDateChooser();
+			dateChooser.setBounds(155, 293, 232, 27);
+		}
+		return dateChooser;
 	}
 }
