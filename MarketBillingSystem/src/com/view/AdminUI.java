@@ -11,6 +11,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JSeparator;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class AdminUI extends JFrame {
 
@@ -94,55 +96,62 @@ public class AdminUI extends JFrame {
 	}
 	private JLabel getLblCreateBill() {
 		if (lblCreateBill == null) {
-			lblCreateBill = new JLabel("Create Bill");
+			lblCreateBill = new JLabel("Add Cashier");
+			lblCreateBill.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new AddCashier().setVisible(true);
+//					dispose();
+				}
+			});
 			lblCreateBill.setForeground(new Color(255, 255, 255));
 			lblCreateBill.setFont(new Font("FreeSans", Font.BOLD, 14));
-			lblCreateBill.setBounds(260, 22, 75, 27);
+			lblCreateBill.setBounds(309, 22, 88, 27);
 		}
 		return lblCreateBill;
 	}
 	private JLabel getLabel() {
 		if (label == null) {
 			label = new JLabel("");
-			Image img = new ImageIcon(getClass().getResource("/create.png")).getImage();
+			Image img = new ImageIcon(getClass().getResource("/cashier.png")).getImage();
 			label.setIcon(new ImageIcon(img));
-			label.setBounds(216, 17, 32, 32);
+			label.setBounds(265, 17, 32, 32);
 		}
 		return label;
 	}
 	private JLabel getLabel_1() {
 		if (label_1 == null) {
 			label_1 = new JLabel("");
-			Image img = new ImageIcon(getClass().getResource("/search1.png")).getImage();
+			Image img = new ImageIcon(getClass().getResource("/warehouse.png")).getImage();
 			label_1.setIcon(new ImageIcon(img));
-			label_1.setBounds(360, 17, 32, 32);
+			label_1.setBounds(420, 17, 32, 32);
 		}
 		return label_1;
 	}
 	private JLabel getLabel_2() {
 		if (label_2 == null) {
 			label_2 = new JLabel("");
-			Image img = new ImageIcon(getClass().getResource("/info.png")).getImage();
+			Image img = new ImageIcon(getClass().getResource("/trade.png")).getImage();
 			label_2.setIcon(new ImageIcon(img));
-			label_2.setBounds(509, 17, 32, 32);
+			label_2.setBounds(533, 17, 32, 32);
 		}
 		return label_2;
 	}
 	private JLabel getLblCreateBill_1() {
 		if (lblCreateBill_1 == null) {
-			lblCreateBill_1 = new JLabel("Search Bill");
+			lblCreateBill_1 = new JLabel("Stocks");
 			lblCreateBill_1.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1.setFont(new Font("FreeSans", Font.BOLD, 14));
-			lblCreateBill_1.setBounds(404, 22, 75, 27);
+			lblCreateBill_1.setBounds(469, 22, 56, 27);
 		}
 		return lblCreateBill_1;
 	}
 	private JLabel getLblCreateBill_1_1() {
 		if (lblCreateBill_1_1 == null) {
-			lblCreateBill_1_1 = new JLabel("Product Information");
+			lblCreateBill_1_1 = new JLabel("Transaction");
 			lblCreateBill_1_1.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1_1.setFont(new Font("FreeSans", Font.BOLD, 14));
-			lblCreateBill_1_1.setBounds(553, 22, 138, 27);
+			lblCreateBill_1_1.setBounds(577, 22, 88, 27);
 		}
 		return lblCreateBill_1_1;
 	}
@@ -151,7 +160,7 @@ public class AdminUI extends JFrame {
 			lblCreateBill_1_2 = new JLabel("Sales");
 			lblCreateBill_1_2.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1_2.setFont(new Font("FreeSans", Font.BOLD, 14));
-			lblCreateBill_1_2.setBounds(771, 22, 38, 27);
+			lblCreateBill_1_2.setBounds(723, 22, 38, 27);
 		}
 		return lblCreateBill_1_2;
 	}
@@ -160,7 +169,7 @@ public class AdminUI extends JFrame {
 			label_3 = new JLabel("");
 			Image img = new ImageIcon(getClass().getResource("/sales.png")).getImage();
 			label_3.setIcon(new ImageIcon(img));
-			label_3.setBounds(727, 17, 32, 32);
+			label_3.setBounds(677, 17, 32, 32);
 		}
 		return label_3;
 	}

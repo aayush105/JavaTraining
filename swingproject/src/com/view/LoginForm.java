@@ -112,7 +112,7 @@ public class LoginForm extends JFrame {
 						return ;
 					}
 					if(passwordTxt.getText().isBlank()) {
-						JOptionPane.showMessageDialog(passwordTxt, "username required");
+						JOptionPane.showMessageDialog(passwordTxt, "password required");
 						return ;
 					}
 					

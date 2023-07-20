@@ -5,13 +5,27 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.db.DB;
+
+
+
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
+import java.awt.HeadlessException;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginForm extends JFrame {
 
@@ -83,8 +97,8 @@ public class LoginForm extends JFrame {
 	private JTextField getUsernameTxt() {
 		if (usernameTxt == null) {
 			usernameTxt = new JTextField();
-			usernameTxt.setForeground(new Color(255, 255, 255));
-			usernameTxt.setBackground(new Color(119, 118, 123));
+			usernameTxt.setForeground(new Color(0, 0, 0));
+			usernameTxt.setBackground(new Color(255, 255, 255));
 			usernameTxt.setBounds(137, 49, 174, 30);
 			usernameTxt.setColumns(10);
 		}
@@ -93,8 +107,8 @@ public class LoginForm extends JFrame {
 	private JTextField getPasswordTxt() {
 		if (passwordTxt == null) {
 			passwordTxt = new JTextField();
-			passwordTxt.setForeground(new Color(255, 255, 255));
-			passwordTxt.setBackground(new Color(119, 118, 123));
+			passwordTxt.setForeground(new Color(0, 0, 0));
+			passwordTxt.setBackground(new Color(255, 255, 255));
 			passwordTxt.setColumns(10);
 			passwordTxt.setBounds(137, 120, 174, 30);
 		}
@@ -103,6 +117,13 @@ public class LoginForm extends JFrame {
 	private JButton getCancelBtn() {
 		if (cancelBtn == null) {
 			cancelBtn = new JButton("Cancel");
+			cancelBtn.addActionListener(new ActionListener() {
+				
+				public void actionPerformed(ActionEvent e) {
+					new IndexForm().setVisible(true);
+					dispose();
+				}
+			});
 			cancelBtn.setFont(new Font("FreeSans", Font.BOLD, 14));
 			cancelBtn.setForeground(new Color(255, 255, 255));
 			cancelBtn.setBackground(new Color(192, 28, 40));
@@ -113,6 +134,53 @@ public class LoginForm extends JFrame {
 	private JButton getLoginBtn() {
 		if (loginBtn == null) {
 			loginBtn = new JButton("Login");
+			loginBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+
+					// form validation
+					if(usernameTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(usernameTxt, "username required");
+						return ;
+					}
+					if(passwordTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(passwordTxt, "password required");
+						return ;
+					}
+					
+					String un = usernameTxt.getText(); // to get the value of username
+					String psw = passwordTxt.getText(); // to get the value of password
+					
+					try {
+						// login sql
+						String sql = "select * from admin where username = '"+un+"' and password='"+psw+"'";
+						Statement stm = DB.getConnection().createStatement();
+						ResultSet rs = stm.executeQuery(sql);
+						if(rs.next()) {
+							JOptionPane.showMessageDialog(null, "Login Success");
+							new AdminUI().setVisible(true);
+							dispose();
+						} else {
+							JOptionPane.showMessageDialog(null, "Login Failed");
+						}
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				} 
+					
+					
+					
+//					if(un.equals("aayush105") && psw.equals("123")) {
+//						
+//						JOptionPane.showMessageDialog(null,"login success");
+//						new AdminUI().setVisible(true); // to redirect to the home page
+//						dispose();						
+//					}else{
+//						JOptionPane.showMessageDialog(null,"login failed");
+//					}
+//				}
+				
+			});
 			loginBtn.setBackground(new Color(53, 132, 228));
 			loginBtn.setForeground(new Color(255, 255, 255));
 			loginBtn.setFont(new Font("FreeSans", Font.BOLD, 14));

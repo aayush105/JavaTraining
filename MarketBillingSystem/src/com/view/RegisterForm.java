@@ -7,12 +7,20 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import com.model.Admin;
+import com.service.AdminService;
+import com.service.AdminServiceImpl;
 import com.toedter.calendar.JDateChooser;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class RegisterForm extends JFrame {
 
@@ -57,7 +65,7 @@ public class RegisterForm extends JFrame {
 	public RegisterForm() {
 		setTitle("Register Form");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 476, 589);
+		setBounds(100, 100, 476, 548);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(61, 56, 70));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -94,7 +102,7 @@ public class RegisterForm extends JFrame {
 			});
 			lblClickHereTo.setFont(new Font("FreeSans", Font.BOLD, 14));
 			lblClickHereTo.setForeground(new Color(255, 255, 255));
-			lblClickHereTo.setBounds(182, 509, 133, 15);
+			lblClickHereTo.setBounds(185, 477, 133, 15);
 		}
 		return lblClickHereTo;
 	}
@@ -164,7 +172,8 @@ public class RegisterForm extends JFrame {
 	private JTextField getFnameTxt() {
 		if (fnameTxt == null) {
 			fnameTxt = new JTextField();
-			fnameTxt.setBackground(new Color(94, 92, 100));
+			fnameTxt.setForeground(new Color(0, 0, 0));
+			fnameTxt.setBackground(new Color(255, 255, 255));
 			fnameTxt.setBounds(155, 33, 232, 27);
 			fnameTxt.setColumns(10);
 		}
@@ -173,7 +182,8 @@ public class RegisterForm extends JFrame {
 	private JTextField getLnameTxt() {
 		if (lnameTxt == null) {
 			lnameTxt = new JTextField();
-			lnameTxt.setBackground(new Color(94, 92, 100));
+			lnameTxt.setForeground(new Color(0, 0, 0));
+			lnameTxt.setBackground(new Color(255, 255, 255));
 			lnameTxt.setColumns(10);
 			lnameTxt.setBounds(155, 85, 232, 27);
 		}
@@ -182,7 +192,8 @@ public class RegisterForm extends JFrame {
 	private JTextField getUsernameTxt() {
 		if (usernameTxt == null) {
 			usernameTxt = new JTextField();
-			usernameTxt.setBackground(new Color(94, 92, 100));
+			usernameTxt.setForeground(new Color(0, 0, 0));
+			usernameTxt.setBackground(new Color(255, 255, 255));
 			usernameTxt.setColumns(10);
 			usernameTxt.setBounds(155, 136, 232, 27);
 		}
@@ -191,7 +202,8 @@ public class RegisterForm extends JFrame {
 	private JTextField getPasswordTxt() {
 		if (passwordTxt == null) {
 			passwordTxt = new JTextField();
-			passwordTxt.setBackground(new Color(94, 92, 100));
+			passwordTxt.setForeground(new Color(0, 0, 0));
+			passwordTxt.setBackground(new Color(255, 255, 255));
 			passwordTxt.setColumns(10);
 			passwordTxt.setBounds(155, 189, 232, 27);
 		}
@@ -200,7 +212,8 @@ public class RegisterForm extends JFrame {
 	private JTextField getRepasswordTxt() {
 		if (repasswordTxt == null) {
 			repasswordTxt = new JTextField();
-			repasswordTxt.setBackground(new Color(94, 92, 100));
+			repasswordTxt.setForeground(new Color(0, 0, 0));
+			repasswordTxt.setBackground(new Color(255, 255, 255));
 			repasswordTxt.setColumns(10);
 			repasswordTxt.setBounds(155, 243, 232, 27);
 		}
@@ -209,29 +222,111 @@ public class RegisterForm extends JFrame {
 	private JTextField getAddressTxt() {
 		if (addressTxt == null) {
 			addressTxt = new JTextField();
-			addressTxt.setBackground(new Color(94, 92, 100));
+			addressTxt.setForeground(new Color(0, 0, 0));
+			addressTxt.setBackground(new Color(255, 255, 255));
 			addressTxt.setColumns(10);
-			addressTxt.setBounds(155, 340, 232, 75);
+			addressTxt.setBounds(155, 340, 232, 27);
 		}
 		return addressTxt;
 	}
 	private JButton getCancelBtn() {
 		if (cancelBtn == null) {
 			cancelBtn = new JButton("Cancel");
+			cancelBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					fnameTxt.setText("");
+					lnameTxt.setText("");
+					usernameTxt.setText("");
+					passwordTxt.setText("");
+					repasswordTxt.setText("");
+					addressTxt.setText("");
+					dateChooser.setDate(null);
+				}
+			});
 			cancelBtn.setFont(new Font("FreeSans", Font.BOLD, 14));
 			cancelBtn.setBackground(new Color(192, 28, 40));
 			cancelBtn.setForeground(new Color(255, 255, 255));
-			cancelBtn.setBounds(119, 445, 98, 33);
+			cancelBtn.setBounds(125, 410, 98, 33);
 		}
 		return cancelBtn;
 	}
 	private JButton getRegisterBtn() {
 		if (registerBtn == null) {
 			registerBtn = new JButton("Register");
+			registerBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+					// form validation
+					if(fnameTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(fnameTxt, "firstname required");
+						return ;
+					}
+					if(lnameTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(lnameTxt, "lastname required");
+						return ;
+					}
+					if(usernameTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(usernameTxt, "username required");
+						return ;
+					}
+					if(passwordTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(passwordTxt, "password required");
+						return ;
+					}
+					if(repasswordTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(repasswordTxt, "reupassword required");
+						return ;
+					}
+					if(dateChooser.getDateFormatString().isBlank()) {
+						JOptionPane.showMessageDialog(dateChooser, "dob required");
+						return ;
+					}
+					if(addressTxt.getText().isBlank()) {
+						JOptionPane.showMessageDialog(addressTxt, "address required");
+						return ;
+					}
+					
+					
+					
+					Admin a = new Admin();
+					a.setFname(fnameTxt.getText());
+					a.setLname(lnameTxt.getText());
+					a.setUsername(usernameTxt.getText());
+					a.setPassword(passwordTxt.getText());
+					a.setRepassword(repasswordTxt.getText());
+					a.setAddress(addressTxt.getText());
+					java.util.Date selectedDate = dateChooser.getDate();
+					java.sql.Date sqlDate = new java.sql.Date(selectedDate.getTime());
+					a.setDob(sqlDate);
+
+					
+					if(!(passwordTxt.getText()).equals(repasswordTxt.getText())) {
+						JOptionPane.showMessageDialog(null, "Password not match");
+						
+					}else {
+						AdminService as = new AdminServiceImpl();
+						boolean res = as.addAdmin(a);
+						
+						if(res) {
+							JOptionPane.showMessageDialog(null, "Added Success");
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Added Failed");
+						}
+						fnameTxt.setText("");
+						lnameTxt.setText("");
+						usernameTxt.setText("");
+						passwordTxt.setText("");
+						repasswordTxt.setText("");
+						addressTxt.setText("");
+						dateChooser.setDate(null);
+					}
+				}
+			});
 			registerBtn.setFont(new Font("FreeSans", Font.BOLD, 14));
 			registerBtn.setForeground(new Color(255, 255, 255));
 			registerBtn.setBackground(new Color(53, 132, 228));
-			registerBtn.setBounds(289, 445, 98, 33);
+			registerBtn.setBounds(289, 410, 98, 33);
 		}
 		return registerBtn;
 	}
