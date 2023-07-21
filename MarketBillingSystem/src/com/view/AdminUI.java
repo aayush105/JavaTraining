@@ -182,6 +182,14 @@ public class AdminUI extends JFrame {
 	private JLabel getLblCreateBill_1_2_1() {
 		if (lblCreateBill_1_2_1 == null) {
 			lblCreateBill_1_2_1 = new JLabel("Exit");
+			lblCreateBill_1_2_1.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					
+					new IndexForm().setVisible(true);
+					dispose();
+				}
+			});
 			lblCreateBill_1_2_1.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1_2_1.setFont(new Font("FreeSans", Font.BOLD, 14));
 			lblCreateBill_1_2_1.setBounds(934, 22, 32, 27);
