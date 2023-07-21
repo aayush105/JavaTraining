@@ -54,7 +54,7 @@ public class AddCashier extends JFrame {
 	private JTable table;
 	private JButton updateBtn;
 	private JButton deleteBtn;
-	private int sid;
+	private int sid = 0;
 	/**
 	 * Launch the application.
 	 */
