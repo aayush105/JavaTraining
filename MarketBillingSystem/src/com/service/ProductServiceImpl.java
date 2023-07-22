@@ -117,4 +117,35 @@ public class ProductServiceImpl implements ProductService{
 
 	}
 
+	@Override
+	public List<Product> searchProduct(String data) {
+		
+		List<Product> list = new ArrayList<>();
+		String sql = "select * from product where pid like '%"+data+"%' OR pname like '%"+data+"%'OR available like '%"+data+"%' OR mrp like '%"+data+"%'";
+		
+		try {
+			Statement stm = DB.getConnection().createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			while(rs.next()) {
+				
+				Product p = new Product();
+				
+				p.setPid(rs.getInt("pid"));
+				p.setPname(rs.getString("pname"));
+				p.setAvailable(rs.getInt("available"));
+				p.setMrp(rs.getFloat("mrp"));
+				
+				list.add(p);
+			}
+			
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return list;
+	}
+
 }

@@ -31,5 +31,11 @@ public class BillServiceImpl implements BillService{
 		return null;
 	}
 
+	@Override
+	public List<Bill> searchBill(String data) {
+		
+		return null;
+	}
+
 	
 }
