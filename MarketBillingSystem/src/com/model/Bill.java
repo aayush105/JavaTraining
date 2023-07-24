@@ -1,6 +1,6 @@
 package com.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Bill {
 
@@ -13,6 +13,8 @@ public class Bill {
 	private float discount;
 	private Date date;
 	private float total;
+	private float price;
+	
 	public int getBillno() {
 		return billno;
 	}
@@ -58,14 +60,20 @@ public class Bill {
 	public Date getDate() {
 		return date;
 	}
-	public void setDate(Date sqlDate) {
-		this.date = sqlDate;
+	public void setDate(java.util.Date utilDate) {
+		this.date = (Date) utilDate;
 	}
 	public float getTotal() {
 		return total;
 	}
 	public void setTotal(float total) {
 		this.total = total;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
 	}
 	
 	

@@ -153,7 +153,7 @@ public class Searchbill extends JFrame {
 				new Object[][] {
 				},
 				new String[] {
-					"Date", "Amount", "Customer Name", "Bill No"
+						"Bill No", "Customer Name", "Amount",  "Date"
 				}
 			));
 		}
@@ -161,15 +161,16 @@ public class Searchbill extends JFrame {
 	}
 	
 	private void displayBill() {
+		String bdata = billTxt.getText().trim();
 		
 		BillService bs = new BillServiceImpl();
-		List<Bill> blist = bs.getsBillProducts();
+		List<Bill> blist = bs.searchBill(bdata);
 		
 		DefaultTableModel tmodel = (DefaultTableModel) table.getModel();
 		tmodel.setRowCount(0);
 		
 		for (Bill bl : blist) {
-			tmodel.addRow(new Object[] {bl.getBillno(),bl.getCustname(),bl.getQuantity()*bl.getMrp(),bl.getDate()});
+			tmodel.addRow(new Object[] {bl.getBillno(), bl.getCustname(), bl.getPrice(), bl.getDate()});
 		}
 	}
 	
@@ -187,7 +188,7 @@ public class Searchbill extends JFrame {
 					tmodel.setRowCount(0);
 					
 					for(Bill b : blist) {
-						tmodel.addRow(new Object[] {b.getPid(),b.getPname(),b.getQuantity()*b.getMrp(),b.getDate() } );
+						tmodel.addRow(new Object[] {b.getBillno(), b.getCustname(), b.getPrice(), b.getDate() } );
 					}
 				}
 			});

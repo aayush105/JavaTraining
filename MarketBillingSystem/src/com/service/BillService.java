@@ -9,8 +9,9 @@ import com.model.Product;
 public interface BillService {
 
 	boolean addBill(Bill b);
-	boolean removeBill(int sid);
-	Bill getProductById(int pid);
+	boolean removeBill(int bid);
+	
 	List<Bill> getsBillProducts();
-	List<Bill> searchBill(String data);	
+	List<Bill> searchBill(String data);
+	Bill getBillById(int bid);	
 }

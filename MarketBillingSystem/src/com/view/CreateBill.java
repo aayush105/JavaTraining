@@ -35,6 +35,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JComboBox;
 import com.toedter.calendar.JDateChooser;
+import javax.swing.DefaultComboBoxModel;
 
 public class CreateBill extends JFrame {
 
@@ -52,7 +53,7 @@ public class CreateBill extends JFrame {
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JButton updateBtn;
-	private int sid = 0;
+	private int bid = 0;
 	private JLabel lblBillNo;
 	private JTextField billTxt;
 	private JTextField disTxt;
@@ -222,26 +223,30 @@ public class CreateBill extends JFrame {
 					}
 					
 					int srow = table.getSelectedRow();
-					sid = (int) table.getModel().getValueAt(srow, 0);
-			
+					bid = (int) table.getModel().getValueAt(srow, 0);
+					
 				
 					BillService bs = new BillServiceImpl();
-					Bill b = bs.getProductById(sid);
+					Bill b = bs.getBillById(bid);
 					
-					// set the cashier data to from
+					// set the billing data to from
 					
-					billTxt.setText(String.valueOf(b.getPid()));
-					pidCmbo.setSelectedItem(b.getPid());
+					billTxt.setText(String.valueOf(b.getBillno()));
+					pidCmbo.setSelectedItem(String.valueOf(b.getPid()));
 					pnameTxt.setText(b.getPname());
 					custTxt.setText(b.getCustname());
 					quantityTxt.setText(String.valueOf(b.getQuantity()));
 					mrpTxt.setText(String.valueOf(b.getMrp()));
 					disTxt.setText(String.valueOf(b.getDiscount()));
+
 					
-					java.util.Date selectedDate = dateTxt.getDate();
-					java.sql.Date sqlDate = new java.sql.Date(selectedDate.getTime());
-					dateTxt.setDateFormatString(String.valueOf(b.getDate()));
-//					dateTxt.setDateFormatString(String.valueOf(sqlDate);
+					if (b.getDate() != null) {
+				        // Convert java.util.Date to java.sql.Date and then set in JDateChooser
+				        java.sql.Date sqlDate = new java.sql.Date(b.getDate().getTime());
+				        dateTxt.setDate(sqlDate);
+				    } else {
+				        dateTxt.setDate(null); // Set dateTxt to null if the Bill object's date is null
+				    }
 					
 				}
 			});
@@ -249,7 +254,7 @@ public class CreateBill extends JFrame {
 				new Object[][] {
 				},
 				new String[] {
-					"Price", "MRP", "Product Name", "Quantity"
+					"Bill no", "Product Id", "Product Name", "Quantity", "MRP", "Price"
 				}
 			));
 		}
@@ -275,6 +280,7 @@ public class CreateBill extends JFrame {
 					b.setDate(sqlDate);
 					
 					b.setTotal(Float.parseFloat(totalTxt.getText()));
+					
 					
 					BillService bs = new BillServiceImpl();
 					boolean res = bs.addBill(b);
@@ -316,9 +322,15 @@ public class CreateBill extends JFrame {
 		DefaultTableModel tmodel = (DefaultTableModel) table.getModel();
 		tmodel.setRowCount(0);
 		
-		for (Bill bl : blist) {
-			tmodel.addRow(new Object[] {bl.getQuantity(),bl.getPname(),bl.getMrp(),bl.getQuantity()*bl.getMrp()});
-		}
+			for (Bill bl : blist) {
+				tmodel.addRow(new Object[] {bl.getBillno(),bl.getPid(), bl.getPname(), bl.getQuantity(), bl.getMrp(),bl.getPrice()});
+				
+			}
+			float total = 0;
+			for(int i = 0; i< table.getRowCount();i++) {
+				total += Float.parseFloat(table.getValueAt(i, 5).toString());
+			}
+			totalTxt.setText(Float.toString(total));
 	}
 	private JLabel getLblBillNo() {
 		if (lblBillNo == null) {
@@ -357,6 +369,7 @@ public class CreateBill extends JFrame {
 	private JComboBox getPidCmbo() {
 		if (pidCmbo == null) {
 			pidCmbo = new JComboBox();
+			pidCmbo.setModel(new DefaultComboBoxModel(new String[] {"select pid", "101", "102", "103", "104", "105", "106", "107"}));
 			pidCmbo.setBounds(209, 85, 196, 24);
 		}
 		return pidCmbo;
@@ -406,17 +419,23 @@ public class CreateBill extends JFrame {
 					}
 					
 					int srow = table.getSelectedRow();
-					int sid = (int) table.getModel().getValueAt(srow, 0);
+					int bid = (int) table.getModel().getValueAt(srow, 0);
+					
+					String total = totalTxt.getText();
+					float price = (float) table.getModel().getValueAt(srow, 5);
+					float total1 = Float.parseFloat(total) - price; 
 					
 					BillService bs = new BillServiceImpl();
-					boolean res = bs.removeBill(sid);
+					boolean res = bs.removeBill(bid);
 					
 					if(res) {
 						JOptionPane.showMessageDialog(null, "Delect Success");
+						displayBill();
 					}else {
 						JOptionPane.showMessageDialog(null, "Delete Failed");
 					}
 					
+					Bill b = new Bill();
 					billTxt.setText(String.valueOf(""));
 					pidCmbo.setSelectedItem("");
 					pnameTxt.setText("");
@@ -425,6 +444,7 @@ public class CreateBill extends JFrame {
 					mrpTxt.setText(String.valueOf(""));
 					disTxt.setText(String.valueOf(""));
 					dateTxt.setDateFormatString(String.valueOf(""));
+					totalTxt.setText(String.valueOf(total1));
 					
 				}
 			});
