@@ -54,7 +54,7 @@ public class AdminUI extends JFrame {
 	public AdminUI() {
 		setTitle("Quick Bill");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 996, 563);
+		setBounds(100, 100, 996, 730);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -155,6 +155,14 @@ public class AdminUI extends JFrame {
 	private JLabel getLblCreateBill_1_1() {
 		if (lblCreateBill_1_1 == null) {
 			lblCreateBill_1_1 = new JLabel("Transaction");
+			lblCreateBill_1_1.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+				new Transaction().setVisible(true);
+				dispose();
+				}
+				
+			});
 			lblCreateBill_1_1.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1_1.setFont(new Font("FreeSans", Font.BOLD, 14));
 			lblCreateBill_1_1.setBounds(577, 22, 88, 27);
@@ -164,6 +172,13 @@ public class AdminUI extends JFrame {
 	private JLabel getLblCreateBill_1_2() {
 		if (lblCreateBill_1_2 == null) {
 			lblCreateBill_1_2 = new JLabel("Sales");
+			lblCreateBill_1_2.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new Sales().setVisible(true);
+					dispose();
+				}
+			});
 			lblCreateBill_1_2.setForeground(new Color(255, 255, 255));
 			lblCreateBill_1_2.setFont(new Font("FreeSans", Font.BOLD, 14));
 			lblCreateBill_1_2.setBounds(723, 22, 38, 27);
@@ -216,9 +231,9 @@ public class AdminUI extends JFrame {
 	private JLabel getLabel_5() {
 		if (label_5 == null) {
 			label_5 = new JLabel("");
-			Image img = new ImageIcon(getClass().getResource("/background (1).jpg")).getImage();
+			Image img = new ImageIcon(getClass().getResource("/admin1.jpg")).getImage();
 			label_5.setIcon(new ImageIcon(img));
-			label_5.setBounds(0, 73, 1008, 460);
+			label_5.setBounds(0, 73, 1008, 627);
 		}
 		return label_5;
 	}

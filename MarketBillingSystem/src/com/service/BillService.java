@@ -1,5 +1,7 @@
 package com.service;
 
+import java.sql.ResultSet;
+import java.util.Date;
 import java.util.List;
 
 import com.model.Bill;
@@ -13,5 +15,11 @@ public interface BillService {
 	
 	List<Bill> getsBillProducts();
 	List<Bill> searchBill(String data);
-	Bill getBillById(int bid);	
+	Bill getBillById(int bid);
+	public ResultSet searchtran(String s) ;
+	public ResultSet alltran();
+	boolean addBillitem(int bid, int pid, String pname, int quantity, float mrp, float price);	
+	
+	public ResultSet allbill();
+
 }

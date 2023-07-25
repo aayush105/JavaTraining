@@ -50,6 +50,7 @@ public class Stock extends JFrame {
 	private JTable table;
 	private JButton updateBtn;
 	private int sid = 0;
+	private JLabel backLbl;
 	/**
 	 * Launch the application.
 	 */
@@ -94,6 +95,7 @@ public class Stock extends JFrame {
 		contentPane.add(getAddBtn());
 		contentPane.add(getUpdateBtn());
 		contentPane.add(getScrollPane_1());
+		contentPane.add(getBackLbl());
 		displayProduct();
 	}
 	private JLabel getLblAddCashierDetails() {
@@ -339,5 +341,21 @@ public class Stock extends JFrame {
 		for (Product pl : plist) {
 			tmodel.addRow(new Object[] {pl.getPid(),pl.getPname(),pl.getAvailable()+pl.getAdded(),pl.getMrp()});
 		}
+	}
+	private JLabel getBackLbl() {
+		if (backLbl == null) {
+			backLbl = new JLabel("");
+			backLbl.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new AdminUI().setVisible(true);
+					dispose();
+				}
+			});
+			backLbl.setBounds(34, 12, 40, 32);
+			Image img = new ImageIcon(getClass().getResource("/back.png")).getImage();
+			backLbl.setIcon(new ImageIcon(img));
+		}
+		return backLbl;
 	}
 }

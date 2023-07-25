@@ -55,6 +55,7 @@ public class AddCashier extends JFrame {
 	private JButton updateBtn;
 	private JButton deleteBtn;
 	private int sid = 0;
+	private JLabel backLbl;
 	/**
 	 * Launch the application.
 	 */
@@ -102,6 +103,7 @@ public class AddCashier extends JFrame {
 		contentPane.add(getUpdateBtn());
 		contentPane.add(getDeleteBtn());
 		contentPane.add(getScrollPane_1());
+		contentPane.add(getBackLbl());
 		displayData();
 	}
 	private JLabel getLblAddCashierDetails() {
@@ -246,7 +248,7 @@ public class AddCashier extends JFrame {
 					sid = (int) table.getModel().getValueAt(srow, 0);
 					
 					CashierService cs = new CashierServiceImpl();
-					Cashier c = cs.getStudentById(sid);
+					Cashier c = cs.getCashierById(sid);
 					
 					// set the cashier data to from
 					
@@ -396,5 +398,21 @@ public class AddCashier extends JFrame {
 		for (Cashier cl : clist) {
 			tmodel.addRow(new Object[] {cl.getId(),cl.getCname(),cl.getPhone(),cl.getAddress(),cl.getEmail(),cl.getPassword()});
 		}
+	}
+	private JLabel getBackLbl() {
+		if (backLbl == null) {
+			backLbl = new JLabel("");
+			backLbl.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new AdminUI().setVisible(true);
+					dispose();
+				}
+			});
+			backLbl.setBounds(34, 12, 40, 32);
+			Image img = new ImageIcon(getClass().getResource("/back.png")).getImage();
+			backLbl.setIcon(new ImageIcon(img));
+		}
+		return backLbl;
 	}
 }

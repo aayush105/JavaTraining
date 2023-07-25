@@ -75,7 +75,7 @@ public class CashierServiceImpl implements CashierService {
 	}
 
 	@Override
-	public Cashier getStudentById(int id) {
+	public Cashier getCashierById(int id) {
 		Cashier c = new Cashier();
 		
 		String sql = "select * from cashier where id ="+id;

@@ -45,6 +45,7 @@ public class Searchbill extends JFrame {
 	private int sid = 0;
 
 	private JButton findBtn;
+	private JLabel backLbl;
 	/**
 	 * Launch the application.
 	 */
@@ -65,7 +66,7 @@ public class Searchbill extends JFrame {
 	 * Create the frame.
 	 */
 	public Searchbill() {
-		setTitle("Update Stock");
+		setTitle("Search Bill");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 622, 621);
 		contentPane = new JPanel();
@@ -81,11 +82,12 @@ public class Searchbill extends JFrame {
 		contentPane.add(getScrollPane_1());
 
 		contentPane.add(getFindBtn());
+		contentPane.add(getBackLbl());
 		displayBill();
 	}
 	private JLabel getLblAddCashierDetails() {
 		if (lblAddCashierDetails == null) {
-			lblAddCashierDetails = new JLabel("Product Information");
+			lblAddCashierDetails = new JLabel("Search Bill");
 			lblAddCashierDetails.setForeground(new Color(255, 255, 255));
 			lblAddCashierDetails.setFont(new Font("FreeSans", Font.BOLD, 20));
 			lblAddCashierDetails.setBounds(198, 24, 196, 26);
@@ -128,27 +130,7 @@ public class Searchbill extends JFrame {
 	private JTable getTable_1() {
 		if (table == null) {
 			table = new JTable();
-			table.addMouseListener(new MouseAdapter() {
-				/*
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					if(table.getSelectedRow()<0) {
-						JOptionPane.showMessageDialog(null, "Select any row");
-						return;
-					}
-					
-					int srow = table.getSelectedRow();
-					sid = (int) table.getModel().getValueAt(srow, 0);
-				
-					ProductService ps = new ProductServiceImpl();
-					Product p = ps.getProductById(sid);
-				
-					// set the cashier data to from
-					
-					billTxt.setText(String.valueOf(p.getPid()));
-				}
-				*/
-			});
+			
 			table.setModel(new DefaultTableModel(
 				new Object[][] {
 				},
@@ -198,5 +180,22 @@ public class Searchbill extends JFrame {
 			findBtn.setIcon(new ImageIcon(img));
 		}
 		return findBtn;
+	}
+	
+	private JLabel getBackLbl() {
+		if (backLbl == null) {
+			backLbl = new JLabel("");
+			backLbl.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new CashierUI().setVisible(true);
+					dispose();
+				}
+			});
+			backLbl.setBounds(34, 12, 40, 32);
+			Image img = new ImageIcon(getClass().getResource("/back.png")).getImage();
+			backLbl.setIcon(new ImageIcon(img));
+		}
+		return backLbl;
 	}
 }

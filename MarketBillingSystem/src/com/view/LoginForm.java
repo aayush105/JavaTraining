@@ -37,6 +37,7 @@ public class LoginForm extends JFrame {
 	private JButton cancelBtn;
 	private JButton loginBtn;
 	private JLabel lblClickHereTo;
+	private JLabel lblAdminLogin;
 
 	/**
 	 * Launch the application.
@@ -74,6 +75,7 @@ public class LoginForm extends JFrame {
 		contentPane.add(getCancelBtn());
 		contentPane.add(getLoginBtn());
 		contentPane.add(getLblClickHereTo());
+		contentPane.add(getLblAdminLogin());
 	}
 	private JLabel getLblUsername() {
 		if (lblUsername == null) {
@@ -203,5 +205,14 @@ public class LoginForm extends JFrame {
 			lblClickHereTo.setBounds(106, 249, 241, 15);
 		}
 		return lblClickHereTo;
+	}
+	private JLabel getLblAdminLogin() {
+		if (lblAdminLogin == null) {
+			lblAdminLogin = new JLabel("Admin Login");
+			lblAdminLogin.setFont(new Font("FreeSans", Font.BOLD, 14));
+			lblAdminLogin.setForeground(new Color(255, 255, 255));
+			lblAdminLogin.setBounds(172, 12, 90, 15);
+		}
+		return lblAdminLogin;
 	}
 }

@@ -11,8 +11,9 @@ public interface CashierService {
 	boolean addCashier(Cashier c);
 	boolean deleteCashier(int id);
 	boolean updateCashier(Cashier c);
-	Cashier getStudentById(int id);
+
 	List<Cashier> getsAllCashiers();
+	Cashier getCashierById(int id);
 	
 //	Cashier.getCashierById(int id);
 	

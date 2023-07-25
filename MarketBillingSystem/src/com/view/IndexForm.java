@@ -91,7 +91,8 @@ public class IndexForm extends JFrame {
 			btnCashierLogin.setFont(new Font("FreeSans", Font.BOLD, 14));
 			btnCashierLogin.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					
+					new CashierLogin().setVisible(true);
+					dispose();
 				}
 			});
 			btnCashierLogin.setBounds(293, 195, 134, 37);

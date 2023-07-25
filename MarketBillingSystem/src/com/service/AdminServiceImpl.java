@@ -26,12 +26,11 @@ public class AdminServiceImpl implements AdminService{
             java.util.Date utilDate = a.getDob();
             java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
             pstm.setDate(6, sqlDate);
-            
-			
 			pstm.setString(7, a.getAddress());
 			
 			pstm.execute();
 			return true;
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -42,6 +42,7 @@ public class ProductInfo extends JFrame {
 	private int sid = 0;
 
 	private JButton findBtn;
+	private JLabel backLbl;
 	/**
 	 * Launch the application.
 	 */
@@ -62,7 +63,7 @@ public class ProductInfo extends JFrame {
 	 * Create the frame.
 	 */
 	public ProductInfo() {
-		setTitle("Update Stock");
+		setTitle("Product Information");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 622, 621);
 		contentPane = new JPanel();
@@ -78,6 +79,7 @@ public class ProductInfo extends JFrame {
 		contentPane.add(getScrollPane_1());
 
 		contentPane.add(getFindBtn());
+		contentPane.add(getBackLbl());
 		displayProduct();
 	}
 	private JLabel getLblAddCashierDetails() {
@@ -125,25 +127,7 @@ public class ProductInfo extends JFrame {
 	private JTable getTable_1() {
 		if (table == null) {
 			table = new JTable();
-			table.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					if(table.getSelectedRow()<0) {
-						JOptionPane.showMessageDialog(null, "Select any row");
-						return;
-					}
-					
-					int srow = table.getSelectedRow();
-					sid = (int) table.getModel().getValueAt(srow, 0);
-				
-					ProductService ps = new ProductServiceImpl();
-					Product p = ps.getProductById(sid);
-				
-					// set the cashier data to from
-					
-					pidTxt.setText(String.valueOf(p.getPid()));
-				}
-			});
+			
 			table.setModel(new DefaultTableModel(
 				new Object[][] {
 				},
@@ -165,7 +149,7 @@ public class ProductInfo extends JFrame {
 		tmodel.setRowCount(0); // reset table
 		
 		for (Product pl : plist) {
-			tmodel.addRow(new Object[] {pl.getPid(),pl.getPname(),pl.getAvailable()+pl.getAdded(),pl.getMrp()});
+			tmodel.addRow(new Object[] {pl.getPid(),pl.getPname(),pl.getAvailable(),pl.getMrp()});
 		}
 	}
 	
@@ -174,16 +158,19 @@ public class ProductInfo extends JFrame {
 			findBtn = new JButton("Search");
 			findBtn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					String sdata = pidTxt.getText().trim();
+					int sdata =Integer.parseInt(pidTxt.getText()); 
 					
+//					JOptionPane.showMessageDialog(null, sdata);
 					ProductService ps = new ProductServiceImpl();
+
 					List<Product> plist = ps.searchProduct(sdata);
 					
-					DefaultTableModel tmodel = (DefaultTableModel) table.getModel();
-					tmodel.setRowCount(0);
+//					JOptionPane.showMessageDialog(null, plist);
+					DefaultTableModel tmodel =(DefaultTableModel) table.getModel();
+					tmodel.setRowCount(0); // reset table
 					
-					for(Product p : plist) {
-						tmodel.addRow(new Object[] {p.getPid(),p.getPname(),p.getAvailable(),p.getMrp() } );
+					for (Product pl : plist) {
+						tmodel.addRow(new Object[] {pl.getPid(),pl.getPname(),pl.getAvailable(),pl.getMrp()});
 					}
 				}
 			});
@@ -193,5 +180,21 @@ public class ProductInfo extends JFrame {
 			findBtn.setIcon(new ImageIcon(img));
 		}
 		return findBtn;
+	}
+	private JLabel getBackLbl() {
+		if (backLbl == null) {
+			backLbl = new JLabel("");
+			backLbl.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					new CashierUI().setVisible(true);
+					dispose();
+				}
+			});
+			backLbl.setBounds(34, 12, 40, 32);
+			Image img = new ImageIcon(getClass().getResource("/back.png")).getImage();
+			backLbl.setIcon(new ImageIcon(img));
+		}
+		return backLbl;
 	}
 }

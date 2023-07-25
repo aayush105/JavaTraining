@@ -5,47 +5,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.db.DB;
 import com.model.Bill;
+import com.model.Product;
 
 public class BillServiceImpl implements BillService{
-
+	
 	@Override
 	public boolean addBill(Bill b) {
-		
-		String sql = "insert into createbill(bid,cname,pid,pname,mrp,quantity,discount,date,price) values (?,?,?,?,?,?,?,?,?)";
-		
-		try {
-			PreparedStatement pstm = DB.getConnection().prepareStatement(sql);
-			pstm.setInt(1, b.getBillno());
-			pstm.setString(2, b.getCustname());
-			pstm.setInt(3, b.getPid());
-			pstm.setString(4, b.getPname());
-			pstm.setFloat(5, b.getMrp());
-			pstm.setInt(6, b.getQuantity());
-			pstm.setFloat(7, b.getDiscount());
-			
-			// Convert java.util.Date to java.sql.Date
-            java.util.Date utilDate = b.getDate();
-            java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
-            pstm.setDate(8, sqlDate);
-			
-            float price = (b.getQuantity()*b.getMrp())- b.getDiscount();
-            pstm.setFloat(9, price);
-            
-            pstm.execute();
-            return true;
-            
-		} catch (SQLException e) {
-			
-			e.printStackTrace();
-		}
-		
-		return false;
+	    String sql = "INSERT INTO bill (bid, cname,date, price) VALUES (?, ?, ?, ?)";
+	    
+	    try (PreparedStatement pstm = DB.getConnection().prepareStatement(sql)) {
+	        pstm.setInt(1, b.getBillno());
+	        pstm.setString(2, b.getCustname());
+
+	        // Convert java.util.Date to java.sql.Date
+	        java.util.Date utilDate = b.getDate();
+	        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+	        pstm.setDate(3, sqlDate);
+
+	        pstm.setFloat(4, b.getPrice());
+
+	        pstm.execute();
+	        return true;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        return false;
+	    }
 	}
 
+	
 	@Override
 	public boolean removeBill(int bid) {
 		
@@ -64,6 +56,22 @@ public class BillServiceImpl implements BillService{
 	}
 
 
+	public ResultSet searchtran(String s) {
+
+		String sql = "Select * from bill as b join createbill as cb on cb.bid = b.bid where b.bid ='"+s+"'";
+		
+		try {
+			Statement st = DB.getConnection().createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			return rs;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+	
 	@Override
 	public Bill getBillById(int bid) {
 		
@@ -100,7 +108,7 @@ public class BillServiceImpl implements BillService{
 	public List<Bill> getsBillProducts() {
 		
 		List<Bill> blist = new ArrayList<>();
-		String sql = "select * from createbill";
+		String sql = "select p.pname, p.mrp, p.available, c.qunatity, c.price from product as p inner join createbill as cb on cb.pid = p.pid";
 		
 		try {
 			Statement stm = DB.getConnection().createStatement();
@@ -132,7 +140,7 @@ public class BillServiceImpl implements BillService{
 	@Override
 	public List<Bill> searchBill(String data) {
 		 List<Bill> bList = new ArrayList<>();
-		    String sql = "SELECT bid, cname, price, date FROM createbill WHERE bid LIKE '%" + data + "%' ";
+		    String sql = "SELECT * FROM bill WHERE bid LIKE '%" + data + "%' ";
 		    
 		    try {
 		        Statement stm = DB.getConnection().createStatement();
@@ -156,4 +164,68 @@ public class BillServiceImpl implements BillService{
 		
 	}
 
+	@Override
+	public boolean addBillitem(int bid, int pid, String pname, int quantity, float mrp, float price) {
+
+		String sql = "insert into createbill(bid,pid,pname,quantity,mrp,price) values (?,?,?,?,?,?)";
+		
+		try {
+			PreparedStatement pstm = DB.getConnection().prepareStatement(sql);
+			pstm.setInt(1, bid);
+	
+			pstm.setInt(2, pid);
+			pstm.setString(3, pname);
+			pstm.setInt(4, quantity);
+			pstm.setFloat(5, mrp);
+			pstm.setFloat(6, price);
+
+            
+            pstm.execute();
+            return true;
+            
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+
+
+	@Override
+	public ResultSet alltran() {
+String sql = "Select * from bill as b join createbill as cb on cb.bid = b.bid ";
+		
+		try {
+			Statement st = DB.getConnection().createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			return rs;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+
+
+	@Override
+	public ResultSet allbill() {
+		String sql = "select p.pname, p.mrp, p.available, SUM(cb.quantity) as total_quantity, SUM(cb.price) as total_price from product as p inner join createbill as cb on cb.pid = p.pid group by p.pid,p.pname,p.mrp";
+		
+		try {
+			Statement stm = DB.getConnection().createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			return rs;
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return null;
+		
+	}
 }

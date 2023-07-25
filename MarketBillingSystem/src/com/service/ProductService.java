@@ -12,6 +12,7 @@ public interface ProductService {
 	boolean updateProduct(Product p);
 	Product getProductById(int pid);
 	List<Product> getsAllProducts();
-	List<Product> searchProduct(String data);	
-	
+	Product searchProduct_bill(String id);	
+//	List<Product>  searchProduct(String data);
+	List<Product> searchProduct(int data);
 }
