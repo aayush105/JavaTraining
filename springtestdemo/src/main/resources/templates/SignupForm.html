@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>SignUp</title>
@@ -8,5 +8,35 @@
 
 	<h1> Sign up form</h1>
 	<hr>
+	
+	<form action="/signup" method = "POST">
+	
+		Firstname <input type="text" name="fname"><br><br>
+		Lastname <input type="text" name="lname"><br><br>
+		Username <input type="text" name="username"><br><br>
+		Password <input type="password" name="password"><br><br>
+		
+		Gender <input type="radio" value="male" name="gender">Male
+				<input type="radio" value="female" name="gender">Female
+		<br><br>
+		
+		City <select name="city">
+			<option value=""> ------ Select -----</option>
+			<option value="ktm">Kathmandu</option>
+			<option value="Pokhara">Pokhara</option>
+			<option value="Dang">Dang</option>
+			<option value="Ilam">Ilam</option>
+		</select>
+			<br><br>
+			
+		Hobbies <input type="checkbox" name="hobbies" value="Sports"> Playing
+				<input type="checkbox" name="hobbies" value="Travel"> Travel
+				<input type="checkbox" name="hobbies" value="Coding"> Coding
+				<br><br>	
+		<button type="submit">Signup</button>
+	
+	</form>
+	
+	
 </body>
 </html>

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
 <body>
 	 <h1>User Login</h1>
-
+	<hr>
+	
+	<form action="/login" method = "POST">
+	
+		<p style= "color:red"> [[${message}]] <br><br>
+		
+		Username <input type="text" name="username"><br><br>
+		Password <input type="password" name="password"><br><br>
+		<button type="submit">Login</button>
+	
+	</form>
 </body>
 </html>

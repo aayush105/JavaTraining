@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Doctor</title>
+</head>
+<body>
+
+<h1>Doctor Form</h1>
+<hr>
+<form action="/doctor" method="POST">
+
+	First Name <input type ="text" name ="fname"><br><br>
+	Last Name <input type ="text" name ="lname"><br><br>
+	Specialization  <select name="specialization">
+	    <option value="">Choose your specialization</option>
+	    <option value="Cardiologists">Cardiologists</option>
+	    <option value="Neurologist">Neurologist</option>
+	    <option value="Surgeon">Surgeon</option>
+	    <option value="Gynecologist">Gynecologist</option>
+	  </select>
+	 <br><br> 
+	Address <input type ="text" name ="address"><br><br>
+	Mobile <input type ="text" name ="mobile"><br><br>
+	Gender <input type="radio" name="gender" value="male"> Male
+	 	   <input type="radio" name="gender" value="female"> Female
+	<br><br>
+	Note <textarea rows = "5" cols = "50" name = "note" placeholder ="Enter note here...."></textarea><br><br>   
+	Photo <input type="file" name="photo"><br><br>
+	  <input type="submit" value="Create" ><br><br>
+	<a href ="/">Back</a>
+</form>
+
+</body>
+</html>
