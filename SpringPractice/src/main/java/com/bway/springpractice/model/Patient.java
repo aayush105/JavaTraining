@@ -1,7 +1,17 @@
 package com.bway.springpractice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pat_tbl")
 public class Patient {
 
+	@Id
+	@GeneratedValue
+	private int id;
 	private String fname;
 	private String lname;
 	private String mobile;
@@ -14,6 +24,14 @@ public class Patient {
 	private String other;
 	private String detail;
 	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFname() {
 		return fname;
 	}

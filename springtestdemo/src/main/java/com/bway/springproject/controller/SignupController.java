@@ -1,5 +1,6 @@
 package com.bway.springproject.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,10 +9,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bway.springproject.model.User;
+import com.bway.springproject.repository.UserRepository;
 
 @Controller
 public class SignupController {
 
+	@Autowired
+	private UserRepository userRepo;
+	
 	@GetMapping("/signup")
 	public String getSignup() {
 		
@@ -28,6 +33,8 @@ public class SignupController {
 //		System.out.println("Gender= "+gender);
 //		System.out.println("Gender= "+city);
 //		System.out.println("Hobbies= "+hobbies);
+		
+		userRepo.save(user);
 		
 		model.addAttribute("fname",user.getFname());
 		model.addAttribute("lname", user.getLname());

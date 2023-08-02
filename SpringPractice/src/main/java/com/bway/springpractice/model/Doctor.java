@@ -1,7 +1,17 @@
 package com.bway.springpractice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="doc_tbl")
 public class Doctor {
 
+	@Id
+	@GeneratedValue
+	private int id;
 	private String fname;
 	private String lname;
 	private String specialization;
@@ -11,6 +21,14 @@ public class Doctor {
 	private String note;
 	private String photo;
 	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFname() {
 		return fname;
 	}
