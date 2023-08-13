@@ -14,7 +14,7 @@ public class TestDB {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		// getConnection(url,un.pasw);
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname", "username", "password");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/<dbname>", "<username>", "<password>");
 
 		//------------------ insert sql ----------------------
 
