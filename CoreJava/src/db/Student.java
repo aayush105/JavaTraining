@@ -13,7 +13,7 @@ public class Student {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		// getConnection(url,un.pw)
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentDB","root","Aayush_105");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/<database name>","<username>","<password>");
 		
 		//----------- insert data ------------------
 		
