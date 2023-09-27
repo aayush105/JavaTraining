@@ -3,7 +3,7 @@ public class table {
 	public static void main(String[] args) {
 		System.out.println("-----------------------------------------------");
 		System.out.printf("%25s%n", "Detail");
-		System.out.println("------------------------------------------------");
+		System.out.println("-----------------------------------------------");
 		
 		System.out.printf("| %-4s | %-8s | %-4s | %-10s | %-6s |%n", "SN", "Name","Age","Phone","City");
 		System.out.printf("------------------------------------------------%n");
