@@ -21,7 +21,7 @@ public class Employee {
 	private int salary;
 	
 	@OneToOne
-	@JoinColumn(name="adrID")
+	@JoinColumn(name = "adrID") //FK
 	private Address address;
 	
 	@OneToMany(mappedBy =  "employee")

@@ -3,12 +3,13 @@ package com.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 public class Address {
 
-	@Id
-	@GeneratedValue
+	@Id                 //PK
+	@GeneratedValue     //AI
 	private int id;
 	private String country;
 	private String city;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.core.product" id="prod">
+    
+    	<constructor-arg value="9988" />
+    	<constructor-arg value="TV" />
+    	<constructor-arg value="80000" />
+    	<constructor-arg value="Samsung" />
+    	
+    </bean>
+    
+    <bean class="com.core.Car" id="cr">
+    	<property name="model" value="MYP900"></property>
+    	<property name="price" value="50000000"></property>
+    	<property name="color" value="black"></property>
+    </bean>
+
+	<bean class="com.core.Employee" id="emp">
+    	<property name="id" value="5678"></property>
+    	<property name="name" value="siddu singh"></property>
+    	<property name="salary" value="150000"></property>
+    	<property name="car" ref="cr"></property>
+    </bean>
+    
+
+</beans>

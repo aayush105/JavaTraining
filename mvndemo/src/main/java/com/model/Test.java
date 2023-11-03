@@ -7,6 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 public class Test {
@@ -39,14 +40,15 @@ public class Test {
 		session.close();
 	}
 	
+	// get all students
 	static void getAll() {
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
 		Session session = sf.openSession();
 		
-		Criteria crt = session.createCriteria(Student.class);
+		Criteria crt = session.createCriteria(Student.class); //this is used to get detail of students, works like select query in mysql
 //		crt.add(Restrictions.eq("college", "KEC")); // condition
 //		crt.add(Restrictions.ge("age", 23)); // condition
-
+//		crt.addOrder(Order.desc("fname"));
 		
 		
 		List<Student> slist = crt.list(); // select sql
@@ -54,6 +56,7 @@ public class Test {
 		
 	}
 	
+	// update student
 	static void update() {
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
 		Session session = sf.openSession();
@@ -62,11 +65,12 @@ public class Test {
 		Student s = (Student) session.get(Student.class,3);
 		
 				s.setAge(24);
-				session.update(s);
+				session.update(s); // update sql
 				session.getTransaction().commit();
 				session.close();
 	}
 	
+	// delete student 
 	static void delete() {
 		
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
@@ -75,7 +79,7 @@ public class Test {
 		
 		
 		Student s = (Student) session.get(Student.class,6);
-		session.delete(s);
+		session.delete(s); // detele sql
 		session.getTransaction().commit();
 		session.close();
 	}

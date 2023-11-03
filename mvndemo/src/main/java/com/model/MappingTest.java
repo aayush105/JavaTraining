@@ -41,7 +41,7 @@ public class MappingTest {
 		session.close();
 	}
 	
-	//one to one mapping
+	//one to many mapping
 	
 		static void oneTomany() {
 			SessionFactory sf = new Configuration().configure().buildSessionFactory();
@@ -79,6 +79,7 @@ public class MappingTest {
 			session.close();
 		}
 		
+		// many to many mapping
 		static void manyTomany() {
 			SessionFactory sf = new Configuration().configure().buildSessionFactory();
 			Session session = sf.openSession();
