@@ -24,7 +24,7 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public String postLogin(@ModelAttribute User user,Model model) {
-		// to send data from controller to view "Model" is used
+		
 		
 		User u = userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
 		

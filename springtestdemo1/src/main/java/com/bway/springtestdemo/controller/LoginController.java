@@ -1,8 +1,12 @@
 package com.bway.springtestdemo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.bway.springtestdemo.model.User;
 
 @Controller
 public class LoginController {
@@ -14,8 +18,15 @@ public class LoginController {
 	}
 	
 	@PostMapping("/login")
-	public String postLogin() {
+	public String postLogin(@ModelAttribute User user, Model model) {
+		// to send data from controller to view "Model" is used
+		if(user.getUsername().equals("hari") && user.getPassword().equals("123")) {
 		
-		return "Home";
+			// user name will go to uname
+			model.addAttribute("uname", user.getUsername());
+			return "Home";
+		}
+		model.addAttribute("message", "user not found");
+		return "LoginForm";
 	}
 }
