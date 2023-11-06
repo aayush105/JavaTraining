@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patient Form</title>
+</head>
+<body>
+
+	<h1>Patient Form</h1>
+	<hr>
+	<form action="/patient" method="POST">
+
+		First Name <input type="text" name="fname"><br>
+		<br> Last Name <input type="text" name="lname"><br>
+		<br> Mobile <input type="text" name="mobile"><br>
+		<br> Gender <input type="radio" name="gender" value="male">
+		Male <input type="radio" name="gender" value="female"> Female
+		<br>
+		<br> DOB <input type="date" name="dob"> <br>
+		<br> Marial Status <input type="radio" name="status" value="M">
+		M <input type="radio" name="status" value="U"> U <input
+			type="radio" name="status" value="D"> D <input type="radio"
+			name="status" value="LS"> LS <br>
+		<br> Present Address <input type="text" name="paddress"><br>
+		<br> Community Address <input type="text" name="caddress"><br>
+		<br> Past Medical History <br> <input type="checkbox"
+			name="medical" value="Anemia"> Anemia <input type="checkbox"
+			name="medical" value="Asthma"> Asthma <input type="checkbox"
+			name="medical" value="Diabetes"> Diabetes <input
+			type="checkbox" name="medical" value="Cancer"> Cancer <br>
+		<input type="checkbox" name="medical" value="Ulcer"> Ulcer <input
+			type="checkbox" name="medical" value="Chickenpox"> Chickenpox
+		<input type="checkbox" name="medical" value=""> other <input
+			type="text" name="other"> <br>
+		<br> Other Details
+		<textarea rows="5" cols="50" name="detail"
+			placeholder="Enter note here...."></textarea>
+		<br>
+		<br> <input type="submit" value="Register"><br>
+		<br> <a href="/">Back</a>
+	</form>
+
+</body>
+</html>
