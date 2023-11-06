@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="com.model.Product"/>
-    <fullyQualifiedTypeName name="com.view.CashierLogin"/>
-    <fullyQualifiedTypeName name="com.view.CashierUI"/>
-    <fullyQualifiedTypeName name="com.view.Transaction"/>
-    <fullyQualifiedTypeName name="com.view.Sales"/>
-    <fullyQualifiedTypeName name="com.view.AdminUI"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.lang.InternalError"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
     <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
@@ -43,21 +35,29 @@
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="com.bway.springpractice.model.Patient"/>
     <fullyQualifiedTypeName name="com.bway.springpractice.repository.PatientRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="com.core.Product"/>
     <fullyQualifiedTypeName name="com.core.Employee"/>
-    <fullyQualifiedTypeName name="com.bway.springtestdemo.model.User"/>
     <fullyQualifiedTypeName name="com.bway.springPractice1.controller.DoctorController"/>
     <fullyQualifiedTypeName name="com.bway.springPractice1.model.Doctor"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="com.bway.springPractice1.model.Patient"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.bway.springtestdemo.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.bway.springtestdemo.model.User"/>
+    <fullyQualifiedTypeName name="org.springframework.util.DigestUtils"/>
 </qualifiedTypeNameHistroy>

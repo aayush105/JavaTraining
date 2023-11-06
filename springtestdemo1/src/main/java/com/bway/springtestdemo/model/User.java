@@ -1,7 +1,16 @@
 package com.bway.springtestdemo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name ="user_tbl")
 public class User {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String fname;
 	private String lname;
