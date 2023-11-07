@@ -1,5 +1,6 @@
 package com.bway.springPractice1.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,9 +8,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bway.springPractice1.model.Patient;
+import com.bway.springPractice1.repository.PatientRepository;
 
 @Controller
 public class PatientController {
+	
+	@Autowired
+	public PatientRepository patRepo;
 
 	@GetMapping("/patient")
 	public String getPatient() {
@@ -19,6 +24,8 @@ public class PatientController {
 
 	@PostMapping("/patient")
 	public String postPatient(@ModelAttribute Patient pat, Model model) {
+		
+		patRepo.save(pat);
 
 		model.addAttribute("fname", pat.getFname());
 		model.addAttribute("lname", pat.getLname());
