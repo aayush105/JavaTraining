@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class Department {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // Null ko sato Auto dekhinxa db ma
+	@GeneratedValue
 	private int id;
 	private String dept_name;
 	private String dept_head;
