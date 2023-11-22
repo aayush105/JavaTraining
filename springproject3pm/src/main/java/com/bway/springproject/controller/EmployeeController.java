@@ -37,7 +37,7 @@ public class EmployeeController {
 	@GetMapping("/empList")
 	public String empList(Model model) {
 
-		model.addAttribute("eList", empService.getAllEmps());
+		model.addAttribute("empList", empService.getAllEmps());
 
 		return "EmployeeListForm";
 	}
@@ -46,7 +46,7 @@ public class EmployeeController {
 	public String editEmp(@RequestParam int id, Model model) {
 
 		model.addAttribute("eModel", empService.getEmpById(id));
-
+		model.addAttribute("dList", deptService.getAllDepts());
 		return "EmployeeEditForm";
 	}
 

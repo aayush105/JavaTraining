@@ -26,19 +26,39 @@
 
 					<thead>
 						<tr>
-							<td>Employee Name</td>
-							<td>Employee Salary</td>
-							<td>Employee Phone</td>
+							<td>First Name</td>
+							<td>Last Name</td>
+							<td>Email</td>
+							<td>Phone</td>
+							<td>Age</td>
+							<td>Country</td>
+							<td>DoB</td>
+							<td>Gender</td>
+							<td>Company Name</td>
+							<td>Department Name</td>
+							<td>Join date</td>							
+							<td>Post</td>
+							<td>Salary</td>
 							<td>Action</td>
 						</tr>
 					</thead>
 
 					<tbody>
-						<tr th:each=" e: ${eList}">
+						<tr th:each=" e: ${empList}">
 	
-								<td>[[${e.emp_name}]]</td>
-								<td>[[${e.emp_salary}]]</td>
+								<td>[[${e.emp_fname}]]</td>
+								<td>[[${e.emp_lname}]]</td>
+								<td>[[${e.emp_email}]]</td>
 								<td>[[${e.emp_phone}]]</td>
+								<td>[[${e.age}]]</td>
+								<td>[[${e.address.country}]]</td>
+								<td>[[${e.dob}]]</td>
+								<td>[[${e.gender}]]</td>
+								<td>[[${e.companyName}]]</td>
+								<td>[[${e.department.dept_name}]]</td>
+								<td>[[${e.joinDate}]]</td>							
+								<td>[[${e.post}]]</td>
+								<td>[[${e.emp_salary}]]</td>
 
 								<td>
 								<a th:href="@{/emp/edit(id=${e.id})}"><input type="submit" value="Edit" class = "btn btn-success"></a> 
