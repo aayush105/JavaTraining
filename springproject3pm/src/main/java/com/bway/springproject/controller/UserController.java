@@ -31,10 +31,10 @@ public class UserController {
 		User usr = userService.userLogin(user.getEmail(), user.getPassword());
 
 		if (usr != null) {
-			model.addAttribute("fname", user.getFname());
+			model.addAttribute("uname", usr.getFname());
 			return "Home";
 		}
-
+		model.addAttribute("message", "user not found!!");
 		return "LoginForm";
 
 	}
