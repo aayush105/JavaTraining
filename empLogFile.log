@@ -1,0 +1,26 @@
+2023-11-26T21:30:33.808+05:45  INFO 26849 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 26849 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-26T21:30:33.808+05:45  INFO 26849 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-26T21:30:33.925+05:45  INFO 26849 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-26T21:30:33.931+05:45  INFO 26849 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2023-11-26T21:30:34.010+05:45  INFO 26849 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-26T21:30:34.011+05:45  INFO 26849 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-26T21:30:34.011+05:45  INFO 26849 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-26T21:30:34.017+05:45  INFO 26849 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-26T21:30:34.017+05:45  INFO 26849 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 208 ms
+2023-11-26T21:30:34.046+05:45  INFO 26849 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-26T21:30:34.051+05:45  INFO 26849 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-26T21:30:34.052+05:45  INFO 26849 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Starting...
+2023-11-26T21:30:34.061+05:45  INFO 26849 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-36 - Added connection com.mysql.cj.jdbc.ConnectionImpl@491ab628
+2023-11-26T21:30:34.061+05:45  INFO 26849 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Start completed.
+2023-11-26T21:30:34.102+05:45  INFO 26849 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-26T21:30:34.122+05:45  INFO 26849 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-26T21:30:34.214+05:45  WARN 26849 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-26T21:30:34.320+05:45  INFO 26849 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-26T21:30:34.331+05:45  INFO 26849 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-26T21:30:34.335+05:45  INFO 26849 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 0.545 seconds (process running for 4559.709)
+2023-11-26T21:30:34.336+05:45  INFO 26849 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-26T21:30:41.804+05:45  INFO 26849 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-26T21:30:41.804+05:45  INFO 26849 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-26T21:30:41.805+05:45  INFO 26849 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-26T21:30:41.814+05:45  INFO 26849 --- [http-nio-8080-exec-1] c.b.s.controller.UserController          : ------ login success -------
+2023-11-26T21:30:41.824+05:45  WARN 26849 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][Home] Deprecated unwrapped fragment expression "header.html" found in template Home, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.

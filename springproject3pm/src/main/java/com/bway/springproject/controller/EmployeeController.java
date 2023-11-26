@@ -12,6 +12,8 @@ import com.bway.springproject.model.Employee;
 import com.bway.springproject.service.DepartmentService;
 import com.bway.springproject.service.EmployeeService;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class EmployeeController {
 
@@ -22,7 +24,10 @@ public class EmployeeController {
 	private DepartmentService deptService;
 	
 	@GetMapping("/employee")
-	public String getEmp(Model model) {
+	public String getEmp(Model model, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		model.addAttribute("dList", deptService.getAllDepts());
 		return "EmployeeForm";
 	}
@@ -35,31 +40,39 @@ public class EmployeeController {
 	}
 
 	@GetMapping("/empList")
-	public String empList(Model model) {
-
+	public String empList(Model model, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		model.addAttribute("empList", empService.getAllEmps());
 
 		return "EmployeeListForm";
 	}
 
 	@GetMapping("/emp/edit")
-	public String editEmp(@RequestParam int id, Model model) {
-
+	public String editEmp(@RequestParam int id, Model model, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		model.addAttribute("eModel", empService.getEmpById(id));
 		model.addAttribute("dList", deptService.getAllDepts());
 		return "EmployeeEditForm";
 	}
 
 	@PostMapping("/emp/update")
-	public String updateEmp(@ModelAttribute Employee emp) {
-
+	public String updateEmp(@ModelAttribute Employee emp, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		empService.updateEmp(emp);
 		return "redirect:/empList";
 	}
 
 	@GetMapping("/emp/delete")
-	public String deleteEmp(@RequestParam int id) {
-
+	public String deleteEmp(@RequestParam int id, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		empService.deleteEmp(id);
 		return "redirect:/empList";
 	}

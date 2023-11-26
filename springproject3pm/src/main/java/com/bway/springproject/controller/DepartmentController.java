@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bway.springproject.model.Department;
 import com.bway.springproject.service.DepartmentService;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class DepartmentController {
 
@@ -18,8 +20,10 @@ public class DepartmentController {
 	private DepartmentService deptService;
 
 	@GetMapping("/department")
-	public String getDept() {
-
+	public String getDept(HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		return "DepartmentForm";
 	}
 
@@ -32,8 +36,10 @@ public class DepartmentController {
 	}
 
 	@GetMapping("/deptList")
-	public String deptList(Model model) {
-
+	public String deptList(Model model, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		model.addAttribute("dList", deptService.getAllDepts());
 		return "DepartmentListForm";
 	}
@@ -47,14 +53,20 @@ public class DepartmentController {
 	}
 
 	@GetMapping("/dept/edit")
-	public String edit(@RequestParam int id, Model model) {
-
+	public String edit(@RequestParam int id, Model model, HttpSession session) {
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		model.addAttribute("dModel", deptService.getDeptById(id));
 		return "DepartmentEditForm";
 	}
 
 	@PostMapping("/dept/update")
-	public String update(@ModelAttribute Department dept) {
+	public String update(@ModelAttribute Department dept, HttpSession session) {
+		
+		if(session.getAttribute("activeuser") == null) {
+			return "LoginForm";
+		}
 		
 		deptService.updateDept(dept);
 
