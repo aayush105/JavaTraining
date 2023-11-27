@@ -12,6 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.bway.springproject.model.Employee;
 import com.bway.springproject.service.DepartmentService;
 import com.bway.springproject.service.EmployeeService;
+import com.bway.springproject.utils.EmployeeExcelView;
+import com.bway.springproject.utils.EmployeePDFView;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -82,12 +84,18 @@ public class EmployeeController {
 	public ModelAndView excel() {
 
 		ModelAndView mv = new ModelAndView(); // in this class we can both keep model and view
+		mv.addObject("list", empService.getAllEmps());
+		mv.setView(new EmployeeExcelView());
+
 		return mv;
 	}
 
 	@GetMapping("/emp/pdf")
 	public ModelAndView pdf() {
 		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("list", empService.getAllEmps());
+		mv.setView(new EmployeePDFView());
 		return mv;
 	}
 }
