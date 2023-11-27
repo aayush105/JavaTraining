@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.bway.springproject.model.Employee;
 import com.bway.springproject.service.DepartmentService;
@@ -22,10 +23,10 @@ public class EmployeeController {
 
 	@Autowired
 	private DepartmentService deptService;
-	
+
 	@GetMapping("/employee")
 	public String getEmp(Model model, HttpSession session) {
-		if(session.getAttribute("activeuser") == null) {
+		if (session.getAttribute("activeuser") == null) {
 			return "LoginForm";
 		}
 		model.addAttribute("dList", deptService.getAllDepts());
@@ -41,7 +42,7 @@ public class EmployeeController {
 
 	@GetMapping("/empList")
 	public String empList(Model model, HttpSession session) {
-		if(session.getAttribute("activeuser") == null) {
+		if (session.getAttribute("activeuser") == null) {
 			return "LoginForm";
 		}
 		model.addAttribute("empList", empService.getAllEmps());
@@ -51,7 +52,7 @@ public class EmployeeController {
 
 	@GetMapping("/emp/edit")
 	public String editEmp(@RequestParam int id, Model model, HttpSession session) {
-		if(session.getAttribute("activeuser") == null) {
+		if (session.getAttribute("activeuser") == null) {
 			return "LoginForm";
 		}
 		model.addAttribute("eModel", empService.getEmpById(id));
@@ -61,7 +62,7 @@ public class EmployeeController {
 
 	@PostMapping("/emp/update")
 	public String updateEmp(@ModelAttribute Employee emp, HttpSession session) {
-		if(session.getAttribute("activeuser") == null) {
+		if (session.getAttribute("activeuser") == null) {
 			return "LoginForm";
 		}
 		empService.updateEmp(emp);
@@ -70,10 +71,23 @@ public class EmployeeController {
 
 	@GetMapping("/emp/delete")
 	public String deleteEmp(@RequestParam int id, HttpSession session) {
-		if(session.getAttribute("activeuser") == null) {
+		if (session.getAttribute("activeuser") == null) {
 			return "LoginForm";
 		}
 		empService.deleteEmp(id);
 		return "redirect:/empList";
+	}
+
+	@GetMapping("/emp/excel")
+	public ModelAndView excel() {
+
+		ModelAndView mv = new ModelAndView(); // in this class we can both keep model and view
+		return mv;
+	}
+
+	@GetMapping("/emp/pdf")
+	public ModelAndView pdf() {
+		ModelAndView mv = new ModelAndView();
+		return mv;
 	}
 }
