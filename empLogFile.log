@@ -1204,3 +1204,805 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [Login
 2023-11-28T00:28:33.231+05:45  INFO 49629 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-28T00:28:33.233+05:45  INFO 49629 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-11-28T00:28:33.243+05:45  INFO 49629 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-28T00:30:48.911+05:45  INFO 50435 --- [main] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication v2.0 using Java 17.0.7 with PID 50435 (/home/aayush/Codes/Spring project(Demo)/springproject3pm-2.0.jar started by aayush in /home/aayush/Codes/Spring project(Demo))
+2023-11-28T00:30:48.914+05:45  INFO 50435 --- [main] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T00:30:49.862+05:45  INFO 50435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T00:30:49.966+05:45  INFO 50435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+2023-11-28T00:30:50.867+05:45  INFO 50435 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T00:30:50.878+05:45  INFO 50435 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T00:30:50.879+05:45  INFO 50435 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T00:30:50.977+05:45  INFO 50435 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T00:30:50.978+05:45  INFO 50435 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2002 ms
+2023-11-28T00:30:51.222+05:45  INFO 50435 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T00:30:51.328+05:45  INFO 50435 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-28T00:30:51.332+05:45  INFO 50435 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-28T00:30:51.779+05:45  INFO 50435 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T00:30:51.818+05:45  INFO 50435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-28T00:30:52.214+05:45  INFO 50435 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ecba515
+2023-11-28T00:30:52.216+05:45  INFO 50435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-28T00:30:53.299+05:45  INFO 50435 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T00:30:53.374+05:45  INFO 50435 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T00:30:54.069+05:45  WARN 50435 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T00:30:54.304+05:45  INFO 50435 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T00:30:54.673+05:45  INFO 50435 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T00:30:54.705+05:45  INFO 50435 --- [main] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 6.297 seconds (process running for 6.948)
+2023-11-28T00:31:04.640+05:45  INFO 50435 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28T00:31:04.641+05:45  INFO 50435 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-28T00:31:04.643+05:45  INFO 50435 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-28T00:31:04.901+05:45  INFO 50435 --- [http-nio-8080-exec-2] c.b.s.controller.UserController          : ------ inside login page -------
+2023-11-28T00:31:14.696+05:45  INFO 50435 --- [http-nio-8080-exec-1] c.b.s.controller.UserController          : ------ login success -------
+2023-11-28T00:31:14.701+05:45  WARN 50435 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][Home] Deprecated unwrapped fragment expression "header.html" found in template Home, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:16.359+05:45  WARN 50435 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][DepartmentForm] Deprecated unwrapped fragment expression "header.html" found in template DepartmentForm, line 10, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:17.470+05:45  WARN 50435 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][DepartmentListForm] Deprecated unwrapped fragment expression "header.html" found in template DepartmentListForm, line 11, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:18.488+05:45  WARN 50435 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][EmployeeForm] Deprecated unwrapped fragment expression "header.html" found in template EmployeeForm, line 10, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:19.647+05:45  WARN 50435 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][EmployeeListForm] Deprecated unwrapped fragment expression "header.html" found in template EmployeeListForm, line 10, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:21.602+05:45  WARN 50435 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][GalleryForm] Deprecated unwrapped fragment expression "header.html" found in template GalleryForm, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:22.245+05:45  WARN 50435 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][UploadForm] Deprecated unwrapped fragment expression "header.html" found in template UploadForm, line 8, col 11. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:22.849+05:45  WARN 50435 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][EmailForm] Deprecated unwrapped fragment expression "header.html" found in template EmailForm, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:23.649+05:45  WARN 50435 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][Profile] Deprecated unwrapped fragment expression "header.html" found in template Profile, line 8, col 11. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T00:31:25.161+05:45  INFO 50435 --- [http-nio-8080-exec-9] c.b.s.controller.UserController          : ------ logout success -------
+2023-11-28T00:31:29.901+05:45  INFO 50435 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T00:31:29.905+05:45  INFO 50435 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-28T00:31:29.915+05:45  INFO 50435 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-28T14:11:44.397+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:11:44.402+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:11:44.490+05:45  INFO 8824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28T14:11:44.491+05:45  INFO 8824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28T14:11:45.483+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:11:45.615+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:11:46.778+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:11:46.793+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:11:46.794+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:11:46.912+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:11:46.913+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2421 ms
+2023-11-28T14:11:47.194+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:11:47.279+05:45  INFO 8824 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-28T14:11:47.284+05:45  INFO 8824 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-28T14:11:47.722+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:11:47.764+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-28T14:11:48.434+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73b4c3dc
+2023-11-28T14:11:48.438+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-28T14:11:50.158+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:11:50.342+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:11:51.128+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:11:51.400+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:11:51.782+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:11:51.847+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:11:51.866+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 8.231 seconds (process running for 9.654)
+2023-11-28T14:12:12.727+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28T14:12:12.727+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-28T14:12:12.729+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-28T14:12:12.761+05:45  INFO 8824 --- [http-nio-8080-exec-1] c.b.s.controller.UserController          : ------ inside login page -------
+2023-11-28T14:13:14.558+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:13:14.565+05:45  INFO 8824 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:13:14.567+05:45  INFO 8824 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-28T14:13:14.581+05:45  INFO 8824 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:14.587+05:45  INFO 8824 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-28T14:13:14.602+05:45  INFO 8824 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-28T14:13:14.729+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:13:14.730+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:13:15.044+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:13:15.078+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:13:15.356+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:13:15.359+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:13:15.360+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:13:15.393+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:13:15.394+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 658 ms
+2023-11-28T14:13:15.527+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:13:15.545+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:13:15.549+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-11-28T14:13:15.586+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27b2bba1
+2023-11-28T14:13:15.587+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-11-28T14:13:15.733+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:13:15.789+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:16.093+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:13:16.185+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:13:16.310+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:13:16.336+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:13:16.345+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.669 seconds (process running for 94.133)
+2023-11-28T14:13:16.350+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:13:25.160+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:13:25.163+05:45  INFO 8824 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:13:25.169+05:45  INFO 8824 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:25.170+05:45  INFO 8824 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-11-28T14:13:25.178+05:45  INFO 8824 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-11-28T14:13:25.300+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:13:25.300+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:13:25.586+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:13:25.611+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:13:25.798+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:13:25.800+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:13:25.800+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:13:25.820+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:13:25.820+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 516 ms
+2023-11-28T14:13:25.889+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:13:25.904+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:13:25.906+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-11-28T14:13:25.931+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bf9f6ce
+2023-11-28T14:13:25.931+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-11-28T14:13:26.086+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:13:26.154+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:26.486+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:13:26.557+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:13:26.677+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:13:26.700+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:13:26.708+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.457 seconds (process running for 104.496)
+2023-11-28T14:13:26.711+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:13:36.122+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:13:36.126+05:45  INFO 8824 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:13:36.131+05:45  INFO 8824 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:36.133+05:45  INFO 8824 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-11-28T14:13:36.138+05:45  INFO 8824 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-11-28T14:13:36.235+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:13:36.236+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:13:36.469+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:13:36.489+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:13:36.631+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:13:36.632+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:13:36.633+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:13:36.649+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:13:36.649+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 410 ms
+2023-11-28T14:13:36.710+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:13:36.720+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:13:36.722+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-11-28T14:13:36.746+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12c30a76
+2023-11-28T14:13:36.747+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-11-28T14:13:36.861+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:13:36.910+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:37.130+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:13:37.203+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:13:37.306+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:13:37.328+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:13:37.340+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.144 seconds (process running for 115.128)
+2023-11-28T14:13:37.343+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:13:46.756+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:13:46.760+05:45  INFO 8824 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:13:46.766+05:45  INFO 8824 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:46.767+05:45  INFO 8824 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-11-28T14:13:46.773+05:45  INFO 8824 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-11-28T14:13:46.888+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:13:46.888+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:13:47.156+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:13:47.180+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:13:47.358+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:13:47.359+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:13:47.359+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:13:47.376+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:13:47.376+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2023-11-28T14:13:47.444+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:13:47.455+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:13:47.457+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-11-28T14:13:47.479+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d4fff10
+2023-11-28T14:13:47.479+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-11-28T14:13:47.608+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:13:47.662+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:13:47.921+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:13:48.012+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:13:48.143+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:13:48.172+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:13:48.182+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.342 seconds (process running for 125.97)
+2023-11-28T14:13:48.185+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:13:54.623+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28T14:13:54.624+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-28T14:13:54.625+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-28T14:14:17.688+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:14:17.691+05:45  INFO 8824 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:14:17.691+05:45  INFO 8824 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-28T14:14:17.697+05:45  INFO 8824 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:17.698+05:45  INFO 8824 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-11-28T14:14:17.703+05:45  INFO 8824 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-11-28T14:14:17.806+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:14:17.806+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:14:18.030+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:14:18.048+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:14:18.205+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:14:18.205+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:14:18.206+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:14:18.222+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:14:18.222+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 413 ms
+2023-11-28T14:14:18.287+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:14:18.297+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:14:18.298+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-11-28T14:14:18.320+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27841f89
+2023-11-28T14:14:18.321+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-11-28T14:14:18.424+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:14:18.471+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:18.690+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:14:18.749+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:14:18.851+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:14:18.873+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:14:18.883+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.115 seconds (process running for 156.671)
+2023-11-28T14:14:18.886+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:14:29.299+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:14:29.302+05:45  INFO 8824 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:14:29.307+05:45  INFO 8824 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:29.308+05:45  INFO 8824 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-11-28T14:14:29.314+05:45  INFO 8824 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-11-28T14:14:29.413+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:14:29.413+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:14:29.679+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:14:29.699+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:14:29.857+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:14:29.858+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:14:29.859+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:14:29.876+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:14:29.877+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 461 ms
+2023-11-28T14:14:29.943+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:14:29.952+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:14:29.954+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-11-28T14:14:29.972+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3438246c
+2023-11-28T14:14:29.972+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-11-28T14:14:30.076+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:14:30.123+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:30.363+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:14:30.422+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:14:30.522+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:14:30.541+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:14:30.549+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.174 seconds (process running for 168.337)
+2023-11-28T14:14:30.552+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:14:44.995+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:14:44.999+05:45  INFO 8824 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:14:45.009+05:45  INFO 8824 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:45.010+05:45  INFO 8824 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-11-28T14:14:45.014+05:45  INFO 8824 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-11-28T14:14:45.105+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:14:45.105+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:14:45.321+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:14:45.335+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:14:45.481+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:14:45.482+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:14:45.482+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:14:45.499+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:14:45.500+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 392 ms
+2023-11-28T14:14:45.575+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:14:45.583+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:14:45.584+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-11-28T14:14:45.604+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e8244f
+2023-11-28T14:14:45.604+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-11-28T14:14:45.723+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:14:45.782+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:45.799+05:45  WARN 8824 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeRestApi' defined in file [/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes/com/bway/springproject/api/EmployeeRestApi.class]: Failed to instantiate [com.bway.springproject.api.EmployeeRestApi]: Constructor threw exception
+2023-11-28T14:14:45.799+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:45.799+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-11-28T14:14:45.814+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-11-28T14:14:45.815+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:14:45.827+05:45  INFO 8824 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-28T14:14:45.860+05:45 ERROR 8824 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeRestApi' defined in file [/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes/com/bway/springproject/api/EmployeeRestApi.class]: Failed to instantiate [com.bway.springproject.api.EmployeeRestApi]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.bway.springproject.Springproject3pmApplication.main(Springproject3pmApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bway.springproject.api.EmployeeRestApi]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error, insert "Type VariableDeclaratorId" to complete FormalParameterList
+	Syntax error on token "}", delete this token
+
+	at com.bway.springproject.api.EmployeeRestApi.<init>(EmployeeRestApi.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 24 common frames omitted
+
+2023-11-28T14:14:51.347+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:14:51.347+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:14:51.568+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:14:51.585+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:14:51.731+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:14:51.734+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:14:51.735+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:14:51.749+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:14:51.749+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 398 ms
+2023-11-28T14:14:51.852+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:14:51.867+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:14:51.869+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-11-28T14:14:51.898+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a43e8fe
+2023-11-28T14:14:51.899+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-11-28T14:14:52.076+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:14:52.135+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:52.389+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:14:52.456+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:14:52.569+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:14:52.591+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:14:52.601+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.284 seconds (process running for 190.389)
+2023-11-28T14:14:52.604+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:14:53.978+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:14:53.980+05:45  INFO 8824 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:14:53.985+05:45  INFO 8824 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:53.985+05:45  INFO 8824 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-11-28T14:14:53.993+05:45  INFO 8824 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-11-28T14:14:54.087+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:14:54.088+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:14:54.289+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:14:54.308+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:14:54.452+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:14:54.453+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:14:54.453+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:14:54.476+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:14:54.476+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 386 ms
+2023-11-28T14:14:54.540+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:14:54.552+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:14:54.554+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-11-28T14:14:54.577+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78bbf7f8
+2023-11-28T14:14:54.577+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-11-28T14:14:54.665+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:14:54.704+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:14:54.915+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:14:54.976+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:14:55.079+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:14:55.098+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:14:55.107+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.051 seconds (process running for 192.895)
+2023-11-28T14:14:55.109+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:15:02.519+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:15:02.522+05:45  INFO 8824 --- [Thread-38] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:15:02.527+05:45  INFO 8824 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:15:02.528+05:45  INFO 8824 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-11-28T14:15:02.534+05:45  INFO 8824 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-11-28T14:15:02.649+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:15:02.649+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:15:02.901+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:15:02.918+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:15:03.082+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:15:03.083+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:15:03.083+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:15:03.099+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:15:03.099+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 447 ms
+2023-11-28T14:15:03.160+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:15:03.169+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:15:03.171+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-11-28T14:15:03.190+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a33c29a
+2023-11-28T14:15:03.191+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-11-28T14:15:03.290+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:15:03.338+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:15:03.607+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:15:03.666+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:15:03.773+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:15:03.792+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:15:03.801+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.19 seconds (process running for 201.589)
+2023-11-28T14:15:03.804+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:15:10.205+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:15:10.208+05:45  INFO 8824 --- [Thread-42] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:15:10.212+05:45  INFO 8824 --- [Thread-42] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:15:10.212+05:45  INFO 8824 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-11-28T14:15:10.217+05:45  INFO 8824 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-11-28T14:15:10.332+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:15:10.333+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:15:10.563+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:15:10.582+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:15:10.759+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:15:10.760+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:15:10.761+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:15:10.778+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:15:10.778+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 442 ms
+2023-11-28T14:15:10.844+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:15:10.853+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:15:10.855+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-11-28T14:15:10.875+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51695a6c
+2023-11-28T14:15:10.875+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-11-28T14:15:10.960+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:15:11.012+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:15:11.231+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:15:11.315+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:15:11.426+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:15:11.448+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:15:11.461+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.167 seconds (process running for 209.249)
+2023-11-28T14:15:11.466+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:18:04.558+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:18:04.561+05:45  INFO 8824 --- [Thread-46] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:04.565+05:45  INFO 8824 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:04.566+05:45  INFO 8824 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-11-28T14:18:04.574+05:45  INFO 8824 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2023-11-28T14:18:04.697+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:04.697+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:04.969+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:04.988+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:05.166+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:05.167+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:05.167+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:05.184+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:05.185+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 485 ms
+2023-11-28T14:18:05.259+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:05.273+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:05.275+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-11-28T14:18:05.299+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e2682a0
+2023-11-28T14:18:05.299+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-11-28T14:18:05.398+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:05.454+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:05.754+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:05.842+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:05.863+05:45  WARN 8824 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#add(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#updaString(Employee) mapped.
+2023-11-28T14:18:05.863+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:05.864+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2023-11-28T14:18:05.869+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2023-11-28T14:18:05.870+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:05.881+05:45  INFO 8824 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-28T14:18:05.887+05:45 ERROR 8824 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#add(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#updaString(Employee) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.bway.springproject.Springproject3pmApplication.main(Springproject3pmApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#add(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#updaString(Employee) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 21 common frames omitted
+
+2023-11-28T14:18:08.342+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:08.342+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:08.560+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:08.579+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:08.746+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:08.747+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:08.747+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:08.764+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:08.765+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 421 ms
+2023-11-28T14:18:08.838+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:08.848+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:08.850+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2023-11-28T14:18:08.869+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@268fc321
+2023-11-28T14:18:08.869+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2023-11-28T14:18:08.987+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:09.038+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:09.263+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:09.328+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:09.341+05:45  WARN 8824 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#update(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#add(Employee) mapped.
+2023-11-28T14:18:09.342+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:09.342+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2023-11-28T14:18:09.350+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2023-11-28T14:18:09.351+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:09.360+05:45  INFO 8824 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-28T14:18:09.364+05:45 ERROR 8824 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#update(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#add(Employee) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.bway.springproject.Springproject3pmApplication.main(Springproject3pmApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeRestApi' method 
+com.bway.springproject.api.EmployeeRestApi#update(Employee)
+to {GET [/api/emp/add]}: There is already 'employeeRestApi' bean method
+com.bway.springproject.api.EmployeeRestApi#add(Employee) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 21 common frames omitted
+
+2023-11-28T14:18:13.818+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:13.818+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:14.033+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:14.050+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:14.200+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:14.201+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:14.202+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:14.218+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:14.218+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 398 ms
+2023-11-28T14:18:14.290+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:14.303+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:14.305+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2023-11-28T14:18:14.324+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d5d6bba
+2023-11-28T14:18:14.324+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2023-11-28T14:18:14.421+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:14.465+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:14.675+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:14.769+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:14.883+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:18:14.907+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:18:14.916+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.121 seconds (process running for 392.704)
+2023-11-28T14:18:14.918+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:18:20.311+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:18:20.313+05:45  INFO 8824 --- [Thread-50] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:20.318+05:45  INFO 8824 --- [Thread-50] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:20.319+05:45  INFO 8824 --- [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2023-11-28T14:18:20.327+05:45  INFO 8824 --- [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2023-11-28T14:18:20.446+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:20.446+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:20.671+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:20.697+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:20.873+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:20.873+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:20.874+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:20.890+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:20.890+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 441 ms
+2023-11-28T14:18:20.960+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:20.970+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:20.972+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2023-11-28T14:18:20.994+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68daeefb
+2023-11-28T14:18:20.994+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2023-11-28T14:18:21.080+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:21.122+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:21.326+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:21.391+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:21.492+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:18:21.510+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:18:21.520+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.118 seconds (process running for 399.308)
+2023-11-28T14:18:21.523+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:18:24.914+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:18:24.917+05:45  INFO 8824 --- [Thread-60] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:24.922+05:45  INFO 8824 --- [Thread-60] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:24.922+05:45  INFO 8824 --- [Thread-60] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2023-11-28T14:18:24.926+05:45  INFO 8824 --- [Thread-60] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2023-11-28T14:18:25.043+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:25.043+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:25.282+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:25.301+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:25.444+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:25.445+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:25.445+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:25.459+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:25.459+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2023-11-28T14:18:25.521+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:25.529+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:25.530+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2023-11-28T14:18:25.554+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@135a1b6
+2023-11-28T14:18:25.554+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2023-11-28T14:18:25.640+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:25.680+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:25.906+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:25.970+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:26.064+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:18:26.084+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:18:26.093+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.089 seconds (process running for 403.881)
+2023-11-28T14:18:26.095+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:18:38.525+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:18:38.528+05:45  INFO 8824 --- [Thread-64] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:38.531+05:45  INFO 8824 --- [Thread-64] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:38.532+05:45  INFO 8824 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2023-11-28T14:18:38.535+05:45  INFO 8824 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2023-11-28T14:18:38.632+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:38.633+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:38.831+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:38.847+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:38.986+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:38.987+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:38.987+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:39.002+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:39.002+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 367 ms
+2023-11-28T14:18:39.062+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:39.070+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:39.072+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2023-11-28T14:18:39.096+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@618e1cb8
+2023-11-28T14:18:39.096+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2023-11-28T14:18:39.170+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:39.211+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:39.413+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:39.476+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:39.564+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:18:39.584+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:18:39.593+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 0.99 seconds (process running for 417.381)
+2023-11-28T14:18:39.595+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:18:42.985+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:18:42.987+05:45  INFO 8824 --- [Thread-68] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:18:42.991+05:45  INFO 8824 --- [Thread-68] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:42.991+05:45  INFO 8824 --- [Thread-68] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2023-11-28T14:18:42.994+05:45  INFO 8824 --- [Thread-68] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2023-11-28T14:18:43.104+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:18:43.104+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:18:43.299+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:18:43.315+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:18:43.453+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:18:43.454+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:18:43.454+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:18:43.469+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:18:43.469+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 361 ms
+2023-11-28T14:18:43.526+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:18:43.536+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:18:43.538+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2023-11-28T14:18:43.555+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40a3a99b
+2023-11-28T14:18:43.556+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2023-11-28T14:18:43.633+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:18:43.675+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:18:43.879+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:18:43.940+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:18:44.027+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:18:44.047+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:18:44.058+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 0.984 seconds (process running for 421.846)
+2023-11-28T14:18:44.061+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:19:23.611+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:19:23.613+05:45  INFO 8824 --- [Thread-72] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:19:23.619+05:45  INFO 8824 --- [Thread-72] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:23.619+05:45  INFO 8824 --- [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2023-11-28T14:19:23.624+05:45  INFO 8824 --- [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2023-11-28T14:19:23.766+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:19:23.767+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:19:24.001+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:19:24.023+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:19:24.211+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:19:24.212+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:19:24.212+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:19:24.229+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:19:24.230+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 458 ms
+2023-11-28T14:19:24.306+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:19:24.314+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:19:24.316+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2023-11-28T14:19:24.343+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23665dd4
+2023-11-28T14:19:24.343+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2023-11-28T14:19:24.433+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:19:24.476+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:24.760+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:19:24.828+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:19:24.926+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:19:24.943+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:19:24.952+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.224 seconds (process running for 462.74)
+2023-11-28T14:19:24.955+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:19:31.360+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:19:31.362+05:45  INFO 8824 --- [Thread-76] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:19:31.366+05:45  INFO 8824 --- [Thread-76] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:31.367+05:45  INFO 8824 --- [Thread-76] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2023-11-28T14:19:31.371+05:45  INFO 8824 --- [Thread-76] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2023-11-28T14:19:31.489+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:19:31.490+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:19:31.702+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:19:31.719+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:19:31.922+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:19:31.923+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:19:31.923+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:19:31.938+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:19:31.938+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 444 ms
+2023-11-28T14:19:31.998+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:19:32.006+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:19:32.007+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2023-11-28T14:19:32.023+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60cde147
+2023-11-28T14:19:32.023+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2023-11-28T14:19:32.082+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:19:32.117+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:32.333+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:19:32.405+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:19:32.511+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:19:32.536+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:19:32.545+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.097 seconds (process running for 470.333)
+2023-11-28T14:19:32.551+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:19:47.994+05:45  INFO 8824 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28T14:19:47.997+05:45  INFO 8824 --- [Thread-80] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:19:48.001+05:45  INFO 8824 --- [Thread-80] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:48.002+05:45  INFO 8824 --- [Thread-80] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2023-11-28T14:19:48.012+05:45  INFO 8824 --- [Thread-80] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2023-11-28T14:19:48.136+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Starting Springproject3pmApplication using Java 17.0.7 with PID 8824 (/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm/target/classes started by aayush in /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/springproject3pm)
+2023-11-28T14:19:48.136+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-28T14:19:48.350+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28T14:19:48.375+05:45  INFO 8824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-11-28T14:19:48.541+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-28T14:19:48.542+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-28T14:19:48.542+05:45  INFO 8824 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-28T14:19:48.557+05:45  INFO 8824 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-11-28T14:19:48.557+05:45  INFO 8824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 419 ms
+2023-11-28T14:19:48.618+05:45  INFO 8824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28T14:19:48.628+05:45  INFO 8824 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28T14:19:48.629+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2023-11-28T14:19:48.652+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection com.mysql.cj.jdbc.ConnectionImpl@554c2950
+2023-11-28T14:19:48.652+05:45  INFO 8824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2023-11-28T14:19:48.735+05:45  INFO 8824 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28T14:19:48.775+05:45  INFO 8824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:19:49.009+05:45  WARN 8824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28T14:19:49.088+05:45  INFO 8824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-11-28T14:19:49.208+05:45  INFO 8824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-28T14:19:49.237+05:45  INFO 8824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-28T14:19:49.250+05:45  INFO 8824 --- [restartedMain] c.b.s.Springproject3pmApplication        : Started Springproject3pmApplication in 1.144 seconds (process running for 487.038)
+2023-11-28T14:19:49.252+05:45  INFO 8824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-28T14:20:08.943+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28T14:20:08.943+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-28T14:20:08.945+05:45  INFO 8824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-28T14:20:08.948+05:45  INFO 8824 --- [http-nio-8080-exec-1] c.b.s.controller.UserController          : ------ inside login page -------
+2023-11-28T14:20:14.135+05:45  INFO 8824 --- [http-nio-8080-exec-10] c.b.s.controller.UserController          : ------ login success -------
+2023-11-28T14:20:14.143+05:45  WARN 8824 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][Home] Deprecated unwrapped fragment expression "header.html" found in template Home, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:16.492+05:45  WARN 8824 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][GalleryForm] Deprecated unwrapped fragment expression "header.html" found in template GalleryForm, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:19.322+05:45  WARN 8824 --- [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][UploadForm] Deprecated unwrapped fragment expression "header.html" found in template UploadForm, line 8, col 11. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:19.940+05:45  WARN 8824 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][EmailForm] Deprecated unwrapped fragment expression "header.html" found in template EmailForm, line 9, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:20.739+05:45  WARN 8824 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][Profile] Deprecated unwrapped fragment expression "header.html" found in template Profile, line 8, col 11. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:22.309+05:45  WARN 8824 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][EmployeeListForm] Deprecated unwrapped fragment expression "header.html" found in template EmployeeListForm, line 10, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:23.416+05:45  WARN 8824 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][EmployeeForm] Deprecated unwrapped fragment expression "header.html" found in template EmployeeForm, line 10, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:24.149+05:45  WARN 8824 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][DepartmentListForm] Deprecated unwrapped fragment expression "header.html" found in template DepartmentListForm, line 11, col 12. Please use the complete syntax of fragment expressions instead ("~{header.html}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2023-11-28T14:20:29.728+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-28T14:20:29.730+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-28T14:20:29.731+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-28T14:20:29.737+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T14:20:29.738+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2023-11-28T14:20:29.741+05:45  INFO 8824 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.

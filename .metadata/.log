@@ -4150,3 +4150,437 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+!SESSION 2023-11-28 13:56:36.808 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 13:56:39.115
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 13:56:44.288
+!MESSAGE Logback config file: /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+!SESSION 2023-11-28 13:57:06.321 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 13:57:07.773
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 13:57:09.387
+!MESSAGE Logback config file: /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-11-28 13:57:12.297
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-28 13:57:12.297
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:16.080
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-28 13:57:16.101
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 5326
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.279
+!MESSAGE Boot project ADDED: SpringPractice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.280
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.283
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.315
+!MESSAGE Boot project ADDED: springPractice1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.327
+!MESSAGE Boot project ADDED: springcoredemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.346
+!MESSAGE Boot project ADDED: springcoredemo1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.360
+!MESSAGE Boot project ADDED: springproject
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.361
+!MESSAGE Boot project ADDED: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.370
+!MESSAGE Boot project ADDED: springtestdemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:17.381
+!MESSAGE Boot project ADDED: springtestdemo1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:59.778
+!MESSAGE Classpath changed for project: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:57:59.888
+!MESSAGE Classpath changed for project: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:58:01.429
+!MESSAGE Classpath changed for project: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 13:58:02.023
+!MESSAGE Classpath changed for project: springproject3pm
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-11-28 14:19:24.171
+!MESSAGE Unable to compute end of document
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:246)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:872)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toPosition(LSPEclipseUtils.java:174)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:44)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:80)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.lambda$2(CodeMiningManager.java:189)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.getCodeMinings(CodeMiningManager.java:195)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.updateCodeMinings(CodeMiningManager.java:140)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.run(CodeMiningManager.java:129)
+	at org.eclipse.jface.text.source.SourceViewer.updateCodeMinings(SourceViewer.java:1333)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaCodeMiningReconciler.reconciled(JavaCodeMiningReconciler.java:51)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1681)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SESSION 2023-11-28 15:22:08.110 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 15:22:09.304
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 15:22:10.618
+!MESSAGE Logback config file: /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-11-28 15:22:13.137
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-28 15:22:13.138
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:16.171
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-28 15:22:16.194
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 12614
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.205
+!MESSAGE Boot project ADDED: SpringPractice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.206
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.208
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.238
+!MESSAGE Boot project ADDED: springPractice1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.245
+!MESSAGE Boot project ADDED: springcoredemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.260
+!MESSAGE Boot project ADDED: springcoredemo1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.267
+!MESSAGE Boot project ADDED: springproject
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.267
+!MESSAGE Boot project ADDED: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.274
+!MESSAGE Boot project ADDED: springtestdemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 15:22:17.280
+!MESSAGE Boot project ADDED: springtestdemo1
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-11-28 15:22:26.234
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.asJavaProposals(LSJavaCompletionProposalComputer.java:78)
+	at org.eclipse.lsp4e.jdt.LSJavaCompletionProposalComputer.computeCompletionProposals(LSJavaCompletionProposalComputer.java:50)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:378)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+!SESSION 2023-11-28 20:18:29.457 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 20:18:30.846
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-28 20:18:32.252
+!MESSAGE Logback config file: /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-11-28 20:18:35.722
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-28 20:18:35.723
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:39.275
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-28 20:18:39.292
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 19959
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.568
+!MESSAGE Boot project ADDED: SpringPractice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.569
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.572
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.596
+!MESSAGE Boot project ADDED: springPractice1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.606
+!MESSAGE Boot project ADDED: springcoredemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.621
+!MESSAGE Boot project ADDED: springcoredemo1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.640
+!MESSAGE Boot project ADDED: springproject
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.641
+!MESSAGE Boot project ADDED: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.649
+!MESSAGE Boot project ADDED: springtestdemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:18:40.665
+!MESSAGE Boot project ADDED: springtestdemo1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-28 20:18:46.517
+!MESSAGE executing callback sts4.classpath.wmLFFsLV FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-11-28 20:18:46.519
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2023-11-28 20:19:48.559
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-28 20:19:48.559
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:19:58.480
+!MESSAGE Classpath changed for project: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:19:58.757
+!MESSAGE Classpath changed for project: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:19:58.757
+!MESSAGE Boot project ADDED: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:19:59.418
+!MESSAGE Classpath changed for project: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:19:59.933
+!MESSAGE Classpath changed for project: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-28 20:20:23.473
+!MESSAGE Classpath changed for project: SiteSavvy
+!SESSION 2023-11-29 19:04:34.365 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-29 19:04:36.424
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-11-29 19:04:37.329
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-11-29 19:04:38.536
+!MESSAGE Logback config file: /home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-11-29 19:04:42.401
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-29 19:04:42.401
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:46.970
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-29 19:04:46.988
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 13291
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.166
+!MESSAGE Boot project ADDED: SiteSavvy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.167
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.173
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.174
+!MESSAGE Boot project ADDED: SpringPractice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.175
+!MESSAGE Boot project ADDED: springPractice1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.175
+!MESSAGE Boot project ADDED: springcoredemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.683
+!MESSAGE Boot project ADDED: springcoredemo1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.684
+!MESSAGE Boot project ADDED: springproject
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.685
+!MESSAGE Boot project ADDED: springproject3pm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.686
+!MESSAGE Boot project ADDED: springtestdemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-11-29 19:04:48.688
+!MESSAGE Boot project ADDED: springtestdemo1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-29 19:04:59.531
+!MESSAGE executing callback sts4.classpath.OPBRkSSt FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-11-29 19:04:59.532
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
