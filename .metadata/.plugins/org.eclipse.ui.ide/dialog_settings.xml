@@ -60,6 +60,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/SiteSavvy"/>
+			<item value="/media/aayush/ACC0CC76C0CC48722/book-course-app-backend"/>
+			<item value="/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/Backend-Course-Blogging-Application"/>
 			<item value="/home/aayush/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE"/>
 		</list>
 	</section>

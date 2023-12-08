@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.ConvertingComparator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,7 +41,7 @@ public class EmployeeRestApi {
 		return empService.getEmpById(id);
 	}
 
-	@GetMapping("/api/emp/add")
+	@PostMapping("/api/emp/add")
 	public String add(@RequestBody Employee emp) {
 
 		empService.addEmp(emp);
